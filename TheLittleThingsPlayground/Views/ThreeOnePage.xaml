@@ -9,12 +9,13 @@
         <FlexLayout Margin="15" Direction="Column">
 
             <Label Text="Drop Shadow  (iOS)" Margin="0,0,0,10"/>
-            
+
              <BoxView WidthRequest="100" HeightRequest="100"
                     BackgroundColor="Black"
                     ios:VisualElement.ShadowColor="Red"
-                    ios:VisualElement.ShadowOpacity="0.8"
-                    ios:VisualElement.ShadowRadius="1.4"
+                    ios:VisualElement.ShadowOpacity="1"
+                    ios:VisualElement.ShadowRadius="10"
+                    ios:VisualElement.IsShadowEnabled="true"
                     />
 
             <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
