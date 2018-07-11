@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TheLittleThingsPlayground.Views.ThreeOnePage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="3.1.0">
+    <ScrollView VerticalScrollBarVisibility="Always" 
+                HorizontalScrollBarVisibility="Never">
+        <FlexLayout Margin="15" Direction="Column">
+
+            <Label Text="Drop Shadow  (iOS)" Margin="0,0,0,10"/>
+            
+             <BoxView WidthRequest="100" HeightRequest="100"
+                    BackgroundColor="Black"
+                    ios:VisualElement.ShadowColor="Red"
+                    ios:VisualElement.ShadowOpacity="0.8"
+                    ios:VisualElement.ShadowRadius="1.4"
+                    />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Auto-Resize Editor"/>
+            <Editor Text="Type here" AutoSize="TextChanges"/>
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Switch Color" Margin="0,0,0,10"/>
+            <Switch OnColor="#CC3300" IsToggled="true" />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Return Button" Margin="0,0,0,10"/>
+            <Entry Placeholder="Enter your text" HeightRequest="40" ReturnType="Send" />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Auto Capitalization" Margin="0,0,0,10"/>
+            <Entry Placeholder="Enter your text" HeightRequest="40">
+                <Entry.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                      <x:Arguments>
+                        <KeyboardFlags>CapitalizeNone</KeyboardFlags>
+                      </x:Arguments>
+                    </Keyboard>
+                </Entry.Keyboard>
+            </Entry>
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Disable Text Prediction" Margin="0,0,0,10"/>
+            <Entry Placeholder="Enter your text" IsTextPredictionEnabled="false" HeightRequest="40"/>
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+
+
+            <BoxView BackgroundColor="White" Margin="0,10" HeightRequest="100"/>
+            
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
