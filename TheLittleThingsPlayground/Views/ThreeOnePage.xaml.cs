@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace TheLittleThingsPlayground.Views
 {
@@ -10,6 +12,8 @@ namespace TheLittleThingsPlayground.Views
         public ThreeOnePage()
         {
             InitializeComponent();
+
+            //ShadowBox.On<iOS>().SetShadowOffset(new Size(0, 20));
         }
     }
 }

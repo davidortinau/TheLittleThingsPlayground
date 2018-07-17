@@ -25,6 +25,9 @@ namespace TheLittleThingsPlayground.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            UITabBar.Appearance.TintColor = UIColor.Black;
+
+
             return base.FinishedLaunching(app, options);
         }
     }

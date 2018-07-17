@@ -29,6 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -83,6 +84,18 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_threeone.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_threeone.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_about.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_threeone.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\tab_about.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\tab_feed.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\tab_threeone.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

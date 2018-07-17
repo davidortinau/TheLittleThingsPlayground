@@ -11,6 +11,7 @@
             <Label Text="Drop Shadow  (iOS)" Margin="0,0,0,10"/>
 
              <BoxView WidthRequest="100" HeightRequest="100"
+                      x:Name="ShadowBox"
                     BackgroundColor="Black"
                     ios:VisualElement.ShadowColor="Red"
                     ios:VisualElement.ShadowOpacity="1"
