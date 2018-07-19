@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="TheLittleThingsPlayground.Views.ThreeTwoPage"
+             BackgroundColor="{OnPlatform Android=White}">
+
+    <NavigationPage.TitleView>
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="3.2.0" FontSize="16" TextColor="White" />
+                <Label Text="More Little Things!" FontSize="8" TextColor="White" />
+            </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ScrollView VerticalScrollBarVisibility="Always" 
+                HorizontalScrollBarVisibility="Never">
+        <FlexLayout Margin="15" Direction="Column">
+
+            <Label Text="OnPlatform/OnIdion Markup Extensions" Margin="0,0,0,10"/>
+
+            <BoxView 
+                    FlexLayout.AlignSelf="Center"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    BackgroundColor="{OnPlatform Android=#333333, iOS=#CC3300, Default=Green}" 
+                    />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+            
+            <Label Text="Position and Color (iOS only) of Caret" Margin="0,0,0,10"/>
+            <Entry x:Name="FirstEntry" 
+                   Text="The quick brown fox jumped over the lazy dog." 
+                   HeightRequest="40"
+                   ios:Entry.CursorColor="#CC3300"
+                   />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Button Padding" Margin="0,0,0,10"/>
+
+            <Button Text="Pad Me" 
+                    FlexLayout.AlignSelf="Center"
+                    Padding="60,40"
+                    BackgroundColor="Black" 
+                    TextColor="White"/>
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="BoxView Corner Radius" Margin="0,0,0,10"/>
+
+            <BoxView FlexLayout.AlignSelf="Center"
+                     BackgroundColor="#CC3300"
+                     WidthRequest="200"
+                     HeightRequest="100"
+                     CornerRadius="10,0,0,10"
+                     />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Tap Slider to Set (iOS)" Margin="0,0,0,10"/>
+
+            <Slider
+                ios:Slider.UpdateOnTap="true"
+            />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Label Line Height" Margin="0,0,0,10"/>
+
+            <Label Text="Bacon ipsum dolor amet chicken pork loin ham hock andouille fatback picanha. Andouille picanha bresaola jerky meatball meatloaf, brisket fatback ball tip filet mignon biltong. Ham swine cow, turkey prosciutto bresaola jerky. Leberkas swine boudin, venison tail landjaeger ball tip chuck bacon andouille." 
+                    LineHeight="1.5"
+                   />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="Editor Placeholder / Placeholder Color" Margin="0,0,0,10"/>
+
+            <Editor Placeholder="Entry your long text" 
+                    PlaceholderColor="Purple"/>
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+
+            
+        </FlexLayout>
+    </ScrollView>
+    
+    
+</ContentPage>

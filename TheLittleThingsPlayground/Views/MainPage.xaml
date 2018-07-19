@@ -5,9 +5,9 @@
             x:Class="TheLittleThingsPlayground.Views.MainPage"
             BarBackgroundColor="#f1f1f1"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-            android:TabbedPage.ToolbarPlacement="Top"
-            android:TabbedPage.BarItemColor="#66FFFFFF"
-            android:TabbedPage.BarSelectedItemColor="White">
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="#999999"
+            android:TabbedPage.BarSelectedItemColor="Black">
     <TabbedPage.Children>
         <NavigationPage Title="Browse" Icon="tab_feed.png">
             <x:Arguments>
@@ -17,6 +17,11 @@
         <NavigationPage Title="3.1.0" Icon="tab_threeone.png">
             <x:Arguments>
                 <views:ThreeOnePage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="3.2.0" Icon="tab_threeone.png">
+            <x:Arguments>
+                <views:ThreeTwoPage />
             </x:Arguments>
         </NavigationPage>
         <NavigationPage Title="About" Icon="tab_about.png">
