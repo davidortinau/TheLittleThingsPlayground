@@ -16,14 +16,32 @@
                 HorizontalScrollBarVisibility="Never">
         <FlexLayout Margin="15" Direction="Column">
 
-            <Label Text="OnPlatform/OnIdion Markup Extensions" Margin="0,0,0,10"/>
+            <Label Text="Span Gestures" Margin="0,0,0,10"/>
+            <Label>
+                 <Label.FormattedText>
+                      <FormattedString>
+                          <Span Text="Sometimes you want a span to be tappable, like a phone number or URL: " />
+                          <Span Text="{Binding Url}" TextColor="Blue">
+                              <Span.GestureRecognizers>
+                                     <TapGestureRecognizer 
+                                            Command="{Binding TapCommand}"
+                                            CommandParameter="https://www.xamarin.com"/>
+                               </Span.GestureRecognizers>
+                          </Span>
+                          <Span Text=". Tap it to launch a browser."/>
+                      </FormattedString>
+                 </Label.FormattedText>
+            </Label>
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
+            <Label Text="OnPlatform/OnIdiom Markup Extensions" Margin="0,0,0,10"/>
 
             <BoxView 
                     FlexLayout.AlignSelf="Center"
                     WidthRequest="100"
                     HeightRequest="100"
-                    BackgroundColor="{OnPlatform Android=#333333, iOS=#CC3300, Default=Green}" 
-                    />
+                    BackgroundColor="{OnPlatform Android=#333333, iOS=#CC3300, Default=Green}" />
 
             <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
             
@@ -68,7 +86,7 @@
             <Label Text="Label Line Height" Margin="0,0,0,10"/>
 
             <Label Text="Bacon ipsum dolor amet chicken pork loin ham hock andouille fatback picanha. Andouille picanha bresaola jerky meatball meatloaf, brisket fatback ball tip filet mignon biltong. Ham swine cow, turkey prosciutto bresaola jerky. Leberkas swine boudin, venison tail landjaeger ball tip chuck bacon andouille." 
-                    LineHeight="1.5"
+                    LineHeight="2"
                    />
 
             <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
