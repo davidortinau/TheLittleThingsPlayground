@@ -45,6 +45,11 @@
 
             <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
 
+            <Label Text="Slider Color" Margin="0,0,0,10"/>
+            <Slider ThumbColor="Blue" MinimumTrackColor="Gray" MaximumTrackColor="Red" Value="0.5" />
+
+            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
+
             <Label Text="Return Button" Margin="0,0,0,10"/>
             <Entry Placeholder="Enter your text" HeightRequest="40" ReturnType="Send" />
 
