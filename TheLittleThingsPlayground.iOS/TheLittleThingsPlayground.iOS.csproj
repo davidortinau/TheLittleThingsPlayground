@@ -126,6 +126,9 @@
     <BundleResource Include="Resources\tab_about%403x.png" />
     <BundleResource Include="Resources\tab_about%402x.png" />
     <BundleResource Include="Resources\tab_about.png" />
+    <BundleResource Include="Resources\iconXamarin%403x.png" />
+    <BundleResource Include="Resources\iconXamarin%402x.png" />
+    <BundleResource Include="Resources\iconXamarin.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

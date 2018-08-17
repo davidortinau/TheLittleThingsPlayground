@@ -99,6 +99,10 @@
         <AndroidResource Include="Resources\mipmap-xxxhdpi\tab_about.png" />
         <AndroidResource Include="Resources\mipmap-xxxhdpi\tab_feed.png" />
         <AndroidResource Include="Resources\mipmap-xxxhdpi\tab_threeone.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\iconXamarin.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\iconXamarin.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\iconXamarin.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\iconXamarin.png" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\drawable-hdpi\" />
