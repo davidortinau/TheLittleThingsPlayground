@@ -21,8 +21,6 @@ namespace TheLittleThingsPlayground.Views
             InitializeComponent();
 
             BindingContext = this;
-
-            //ShadowBox.On<iOS>().SetShadowOffset(new Size(0, 20));
         }
     }
 }

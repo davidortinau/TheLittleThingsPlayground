@@ -26,10 +26,11 @@
              <BoxView WidthRequest="100" HeightRequest="100"
                       x:Name="ShadowBox"
                     BackgroundColor="Black"
-                    ios:VisualElement.ShadowColor="Red"
-                    ios:VisualElement.ShadowOpacity="1"
+                    ios:VisualElement.ShadowColor="Black"
+                    ios:VisualElement.ShadowOpacity="0.6"
                     ios:VisualElement.ShadowRadius="10"
                     ios:VisualElement.IsShadowEnabled="true"
+                    ios:VisualElement.ShadowOffset="10,10"
                     />
 
             <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
