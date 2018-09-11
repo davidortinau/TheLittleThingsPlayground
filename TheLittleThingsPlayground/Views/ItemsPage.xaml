@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TheLittleThingsPlayground.Views.ItemsPage" Title="{Binding Title}" x:Name="BrowseItemsPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TheLittleThingsPlayground.Views.ItemsPage" 
+             Title="{Binding Title}" x:Name="BrowseItemsPage"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
@@ -12,6 +16,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="ItemsListView" 
+                      android:ListView.IsFastScrollEnabled="true"
                       ItemsSource="{Binding Items}" 
                       VerticalOptions="FillAndExpand" 
                       HasUnevenRows="true" 

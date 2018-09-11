@@ -9,11 +9,6 @@
             android:TabbedPage.BarItemColor="#999999"
             android:TabbedPage.BarSelectedItemColor="Black">
     <TabbedPage.Children>
-        <NavigationPage Title="Browse" Icon="tab_feed.png">
-            <x:Arguments>
-                <views:ItemsPage />
-            </x:Arguments>
-        </NavigationPage>
         <NavigationPage Title="3.1.0" Icon="tab_threeone.png">
             <x:Arguments>
                 <views:ThreeOnePage />
