@@ -19,13 +19,25 @@ namespace TheLittleThingsPlayground.Views
             private set;
         }
 
+        public Command SwipeCommand
+        {
+            get;
+            private set;
+        }
+
         public ThreeTwoPage()
         {
             InitializeComponent();
 
             TapCommand = new Command<string>(HandleAction);
+            SwipeCommand = new Command(HandleSwipeAction);
 
             BindingContext = this;
+        }
+
+        private async void HandleSwipeAction()
+        {
+            await DisplayAlert("Swiper No Swiping!", "Yay! You successfully used the swipe gesture!", "Close");
         }
 
         protected override void OnAppearing()
