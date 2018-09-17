@@ -6,11 +6,7 @@
             BarBackgroundColor="#f1f1f1"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
-<<<<<<< HEAD
-            android:TabbedPage.BarItemColor="#666666"
-=======
             android:TabbedPage.BarItemColor="#999999"
->>>>>>> 3.2.0-pre
             android:TabbedPage.BarSelectedItemColor="Black">
     <TabbedPage.Children>
         <NavigationPage Title="3.1.0" Icon="tab_threeone.png">
