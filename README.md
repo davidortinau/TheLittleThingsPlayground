@@ -12,6 +12,7 @@ Playground for experimenting with new Xamarin.Forms features.
 * Label Line Height
 * OnPlatform/OnIdiom Markup Extensions
 * Span Gestures
+* Swipe Gesture Recognizer
 * [iOS] Tap Slider
 * TitleView
 
