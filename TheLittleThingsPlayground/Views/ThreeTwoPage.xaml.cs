@@ -23,9 +23,9 @@ namespace TheLittleThingsPlayground.Views
         {
             InitializeComponent();
 
-            BindingContext = this;
-
             TapCommand = new Command<string>(HandleAction);
+
+            BindingContext = this;
         }
 
         protected override void OnAppearing()
@@ -41,5 +41,9 @@ namespace TheLittleThingsPlayground.Views
             await Browser.OpenAsync(url);
         }
 
+        async void Handle_Tapped(object sender, System.EventArgs e)
+        {
+            await Browser.OpenAsync("https://microsoft.com");
+        }
     }
 }

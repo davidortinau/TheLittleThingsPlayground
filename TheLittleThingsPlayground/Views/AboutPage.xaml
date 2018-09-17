@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TheLittleThingsPlayground.Views.AboutPage" xmlns:vm="clr-namespace:TheLittleThingsPlayground.ViewModels" Title="{Binding Title}">
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -29,7 +29,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="AppName" FontAttributes="Bold" FontSize="22" />
+                                <Span Text="The Little Things Playground" FontAttributes="Bold" FontSize="22" />
                                 <Span Text=" " />
                                 <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
                             </FormattedString.Spans>
@@ -40,9 +40,15 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="This app is written in C# and native APIs using the" />
+                                <Span Text="This app is written in C#, XAML, and native APIs using the" />
                                 <Span Text=" " />
-                                <Span Text="Xamarin Platform" FontAttributes="Bold" />
+                                <Span Text="Xamarin Platform" FontAttributes="Bold" TextColor="Blue">
+                                    <Span.GestureRecognizers>
+                                       <TapGestureRecognizer 
+                                            Command="{Binding TapCommand, Mode=OneWay}"
+                                            CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/"/>
+                                     </Span.GestureRecognizers>
+                                </Span>
                                 <Span Text="." />
                             </FormattedString.Spans>
                         </FormattedString>

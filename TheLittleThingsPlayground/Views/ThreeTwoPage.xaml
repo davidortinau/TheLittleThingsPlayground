@@ -4,27 +4,40 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              x:Class="TheLittleThingsPlayground.Views.ThreeTwoPage"
              BackgroundColor="{OnPlatform Android=White}">
-
+    
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/Global.css"/>
+    </ContentPage.Resources>
+    
+    <!-- TitleView -->
     <NavigationPage.TitleView>
-            <StackLayout HorizontalOptions="Center">
-                <Label Text="3.2.0" FontSize="16" TextColor="White" />
-                <Label Text="More Little Things!" FontSize="8" TextColor="White" />
-            </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Image Source="iconXamagon.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer  
+                            Command="{Binding TapCommand, Mode=OneWay}"
+                            CommandParameter="https://www.xamarin.com"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="3.2.0" FontSize="16" TextColor="Black" VerticalTextAlignment="Center" />
+        </StackLayout>
     </NavigationPage.TitleView>
 
     <ScrollView VerticalScrollBarVisibility="Always" 
                 HorizontalScrollBarVisibility="Never">
         <FlexLayout Margin="15" Direction="Column">
-
-            <Label Text="Span Gestures" Margin="0,0,0,10"/>
+            
+            <!-- Span  Gestures -->
+            <Label Text="Span Gestures" class="featureHeader" Margin="0,0,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Label>
                  <Label.FormattedText>
                       <FormattedString>
                           <Span Text="Sometimes you want a span to be tappable, like a phone number or URL: " />
-                          <Span Text="{Binding Url}" TextColor="Blue">
+                          <Span Text="{Binding Url, Mode=OneWay}" TextColor="Blue">
                               <Span.GestureRecognizers>
                                      <TapGestureRecognizer 
-                                            Command="{Binding TapCommand}"
+                                            Command="{Binding TapCommand, Mode=OneWay}"
                                             CommandParameter="https://www.xamarin.com"/>
                                </Span.GestureRecognizers>
                           </Span>
@@ -33,39 +46,36 @@
                  </Label.FormattedText>
             </Label>
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
-            <Label Text="OnPlatform/OnIdiom Markup Extensions" Margin="0,0,0,10"/>
-
+            <!-- OnPlatform / OnIdiom  Markup Extensions -->
+            <Label Text="OnPlatform/OnIdiom Markup Extensions" class="featureHeader" Margin="0,20,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <BoxView 
                     FlexLayout.AlignSelf="Center"
                     WidthRequest="100"
                     HeightRequest="100"
                     BackgroundColor="{OnPlatform Android=#333333, iOS=#CC3300, Default=Green}" />
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-            
-            <Label Text="Position and Color (iOS only) of Caret" Margin="0,0,0,10"/>
+            <!-- Caret Position and Color -->
+            <Label Text="Position and Color (iOS only) of Caret" class="featureHeader" Margin="0,20,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Entry x:Name="FirstEntry" 
                    Text="The quick brown fox jumped over the lazy dog." 
                    HeightRequest="40"
                    ios:Entry.CursorColor="#CC3300"
                    />
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
-            <Label Text="Button Padding" Margin="0,0,0,10"/>
-
+            <!-- Button Padding -->
+            <Label Text="Button Padding" class="featureHeader" Margin="0,20,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Button Text="Pad Me" 
                     FlexLayout.AlignSelf="Center"
                     Padding="60,40"
                     BackgroundColor="Black" 
                     TextColor="White"/>
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
-            <Label Text="BoxView Corner Radius" Margin="0,0,0,10"/>
-
+            <!-- BoxView Corner Radius -->
+            <Label Text="BoxView Corner Radius"  class="featureHeader" Margin="0,20,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <BoxView FlexLayout.AlignSelf="Center"
                      BackgroundColor="#CC3300"
                      WidthRequest="200"
@@ -73,31 +83,27 @@
                      CornerRadius="10,0,0,10"
                      />
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
-            <Label Text="Tap Slider to Set (iOS)" Margin="0,0,0,10"/>
-
+            <!-- Slider Tap -->
+            <Label Text="Tap Slider to Set (iOS)" class="featureHeader" Margin="0,20,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Slider
                 ios:Slider.UpdateOnTap="true"
             />
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
-            <Label Text="Label Line Height" Margin="0,0,0,10"/>
-
+            <!-- Label Line Height -->
+            <Label Text="Label Line Height" class="featureHeader" Margin="0,20,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Label Text="Bacon ipsum dolor amet chicken pork loin ham hock andouille fatback picanha. Andouille picanha bresaola jerky meatball meatloaf, brisket fatback ball tip filet mignon biltong. Ham swine cow, turkey prosciutto bresaola jerky. Leberkas swine boudin, venison tail landjaeger ball tip chuck bacon andouille." 
                     LineHeight="2"
                    />
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
-            <Label Text="Editor Placeholder / Placeholder Color" Margin="0,0,0,10"/>
-
+            <!-- Editor Color, Placeholder Color -->
+            <Label Text="Editor Placeholder / Placeholder Color" class="featureHeader" Margin="0,0,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Editor Placeholder="Entry your long text" 
                     PlaceholderColor="Purple"/>
 
-            <BoxView BackgroundColor="Black" Margin="0,10" HeightRequest="1"/>
-
+            
 
             
         </FlexLayout>

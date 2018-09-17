@@ -55,7 +55,7 @@
         <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2" />
         <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
         <PackageReference Include="Xamarin.Forms">
-          <Version>3.2.0.809874-pre3</Version>
+          <Version>3.2.0.839982</Version>
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
@@ -102,6 +102,11 @@
         <AndroidResource Include="Resources\drawable-xhdpi\iconXamarin.png" />
         <AndroidResource Include="Resources\drawable-xxhdpi\iconXamarin.png" />
         <AndroidResource Include="Resources\drawable-xxxhdpi\iconXamarin.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\iconXamagon.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\iconXamagon.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\iconXamagon.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\iconXamagon.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\iconXamagon.png" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\drawable-hdpi\" />

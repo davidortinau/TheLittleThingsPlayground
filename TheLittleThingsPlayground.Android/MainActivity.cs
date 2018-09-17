@@ -21,6 +21,7 @@ namespace TheLittleThingsPlayground.Droid
 
             Xamarin.Essentials.Platform.Init(this, bundle);
 
+            global::Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
