@@ -19,6 +19,11 @@
                 <views:ThreeTwoPage />
             </x:Arguments>
         </NavigationPage>
+        <NavigationPage Title="3.3.0-pre" Icon="tab_threeone.png">
+            <x:Arguments>
+                <views:ThreeThreePage />
+            </x:Arguments>
+        </NavigationPage>
         <NavigationPage Title="About" Icon="tab_about.png">
             <x:Arguments>
                 <views:AboutPage />
