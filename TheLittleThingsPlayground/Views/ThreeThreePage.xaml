@@ -16,6 +16,7 @@
             <!-- Underline and Strikethrough -->
             <Label Text="Label/Span Underline and Strikethrough" TextDecorations="Underline"  class="featureHeader" Margin="0,0,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="Title above is underlined, and the cannot below is strikethrough."/>
             <Label>
                  <Label.FormattedText>
                       <FormattedString>
@@ -29,7 +30,7 @@
             <!-- Label MaxLines -->
             <Label Text="Label MaxLines" class="featureHeader"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-            <Label MaxLines="4" LineBreakMode="TailTruncation" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis quam non enim pellentesque, ut placerat purus finibus. Nulla quis tincidunt ante. Ut mauris lectus, aliquam a sagittis vitae, consequat eget elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque convallis nunc nisi, a imperdiet elit efficitur et. Duis in lectus mollis, interdum ipsum et, tincidunt orci. Fusce ipsum metus, imperdiet non lacus vitae, facilisis feugiat magna. Nulla volutpat nisl tortor, a consectetur felis consectetur non. Curabitur in enim vulputate sem volutpat bibendum id nec lorem. Mauris laoreet lacus ac volutpat tempus."/>
+            <Label MaxLines="4" LineBreakMode="TailTruncation" Text="You should see 4 lines of text and truncation at the end. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis quam non enim pellentesque, ut placerat purus finibus. Nulla quis tincidunt ante. Ut mauris lectus, aliquam a sagittis vitae, consequat eget elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque convallis nunc nisi, a imperdiet elit efficitur et. Duis in lectus mollis, interdum ipsum et, tincidunt orci. Fusce ipsum metus, imperdiet non lacus vitae, facilisis feugiat magna. Nulla volutpat nisl tortor, a consectetur felis consectetur non. Curabitur in enim vulputate sem volutpat bibendum id nec lorem. Mauris laoreet lacus ac volutpat tempus."/>
             
             <!-- iOS  Modal Presentation Style -->
             <Label Text="[iOS] Modal Presentation Style" class="featureHeader"/>
