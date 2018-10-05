@@ -14,8 +14,9 @@
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
             <Image Source="iconXamagon.png">
                 <Image.GestureRecognizers>
-                    <SwipeGestureRecognizer
-                        Command="{Binding SwipeCommand, Mode=OneWay}"/>
+                    <TapGestureRecognizer
+                        Command="{Binding TapCommand, Mode=OneWay}"
+                        CommandParameter="https://www.xamarin.com"/>
                 </Image.GestureRecognizers>
             </Image>
             <Label Text="3.2.0" FontSize="16" TextColor="Black" VerticalTextAlignment="Center" />
@@ -62,6 +63,7 @@
                    HeightRequest="40"
                    ios:Entry.CursorColor="#CC3300"
                    />
+            <Button Text="Reset Selection" Clicked="Handle_Clicked" />
 
             <!-- Button Padding -->
             <Label Text="Button Padding" class="featureHeader" Margin="0,20,0,10"/>

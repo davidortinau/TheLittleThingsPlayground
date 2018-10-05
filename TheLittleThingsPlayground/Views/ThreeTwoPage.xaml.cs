@@ -35,6 +35,11 @@ namespace TheLittleThingsPlayground.Views
             BindingContext = this;
         }
 
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            MakeSelection();
+        }
+
         private async void HandleSwipeAction()
         {
             await DisplayAlert("Swiper No Swiping!", "Yay! You successfully used the swipe gesture!", "Close");
@@ -43,7 +48,12 @@ namespace TheLittleThingsPlayground.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            MakeSelection();
+        }
 
+        private void MakeSelection()
+        {
+            FirstEntry.Focus();
             FirstEntry.CursorPosition = 4;
             FirstEntry.SelectionLength = 11;
         }
