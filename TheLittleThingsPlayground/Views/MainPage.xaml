@@ -19,7 +19,7 @@
                 <views:ThreeTwoPage />
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="3.3.0-pre" Icon="{OnPlatform UWP=Assets/iconXamagon.png, Default=tab_threeone.png}">
+        <NavigationPage Title="3.3.0" Icon="{OnPlatform UWP=Assets/iconXamagon.png, Default=tab_threeone.png}">
             <x:Arguments>
                 <views:ThreeThreePage />
             </x:Arguments>

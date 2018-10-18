@@ -41,7 +41,7 @@
                             <FormattedString.Spans>
                                 <Span Text="This app is written in C#, XAML, and native APIs using the" />
                                 <Span Text=" " />
-                                <Span Text="Xamarin Platform" FontAttributes="Bold" TextColor="Blue">
+                                <Span Text="Xamarin Platform" FontAttributes="Bold" TextColor="Blue" TextDecorations="Underline">
                                     <Span.GestureRecognizers>
                                        <TapGestureRecognizer 
                                             Command="{Binding TapCommand, Mode=OneWay}"

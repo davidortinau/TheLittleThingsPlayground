@@ -21,5 +21,20 @@ namespace TheLittleThingsPlayground.Views
         {
             await this.Navigation.PushAsync(new SimpleWebView(), true);
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            if(TruncatedLabel.MaxLines == 4)
+            {
+                TruncatedLabel.MaxLines = 20;
+                ReadButton.Text = "[read less]";
+            }
+            else
+            {
+                TruncatedLabel.MaxLines = 4;
+                ReadButton.Text = "[read more]";
+            }
+            
+        }
     }
 }

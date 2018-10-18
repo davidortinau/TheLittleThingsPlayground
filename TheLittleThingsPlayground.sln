@@ -8,8 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLittleThingsPlayground.i
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLittleThingsPlayground", "TheLittleThingsPlayground\TheLittleThingsPlayground.csproj", "{4E1B7C52-4984-44CE-98AF-25CD7A9FB3ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLittleThingsPlayground.UWP", "TheLittleThingsPlayground.UWP\TheLittleThingsPlayground.UWP.csproj", "{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,30 +97,6 @@ Global
 		{4E1B7C52-4984-44CE-98AF-25CD7A9FB3ED}.Release|x64.Build.0 = Release|Any CPU
 		{4E1B7C52-4984-44CE-98AF-25CD7A9FB3ED}.Release|x86.ActiveCfg = Release|Any CPU
 		{4E1B7C52-4984-44CE-98AF-25CD7A9FB3ED}.Release|x86.Build.0 = Release|Any CPU
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|ARM.ActiveCfg = Debug|ARM
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|ARM.Build.0 = Debug|ARM
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|ARM.Deploy.0 = Debug|ARM
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|iPhone.ActiveCfg = Debug|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|x64.ActiveCfg = Debug|x64
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|x64.Build.0 = Debug|x64
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|x64.Deploy.0 = Debug|x64
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|x86.ActiveCfg = Debug|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|x86.Build.0 = Debug|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Debug|x86.Deploy.0 = Debug|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|Any CPU.ActiveCfg = Release|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|ARM.ActiveCfg = Release|ARM
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|ARM.Build.0 = Release|ARM
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|ARM.Deploy.0 = Release|ARM
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|iPhone.ActiveCfg = Release|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|x64.ActiveCfg = Release|x64
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|x64.Build.0 = Release|x64
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|x64.Deploy.0 = Release|x64
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|x86.ActiveCfg = Release|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|x86.Build.0 = Release|x86
-		{40BB1B3E-C7C9-4B11-A012-843E16BBEFA2}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
