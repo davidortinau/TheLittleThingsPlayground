@@ -1,9 +1,9 @@
 # TheLittleThingsPlayground
 Playground for experimenting with new Xamarin.Forms features.
 
-## ThreeThree (Xamarin.Forms 3.3.0-pre)
+## ThreeThree (Xamarin.Forms 3.3.0)
 
-[Release Notes](https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.3/3.3.0-pre1/)
+[Release Notes](https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.3/3.3.0/)
 
 * Label & Span Text Decorations: Underline and Strikethrough
 * Label MaxLines
