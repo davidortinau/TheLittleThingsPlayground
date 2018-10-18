@@ -20,6 +20,7 @@ namespace TheLittleThingsPlayground.Views
             TapCommand = new Command<string>(HandleAction);
 
             BindingContext = this;
+            
         }
 
         async void HandleAction(string url)

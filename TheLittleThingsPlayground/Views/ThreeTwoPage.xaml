@@ -12,7 +12,7 @@
     <!-- TitleView -->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
-            <Image Source="iconXamagon.png">
+            <Image Source="{OnPlatform UWP=Assets/iconXamagon.png, Default=iconXamagon.png}">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
                         Command="{Binding TapCommand, Mode=OneWay}"
@@ -49,11 +49,12 @@
             <!-- OnPlatform / OnIdiom  Markup Extensions -->
             <Label Text="OnPlatform/OnIdiom Markup Extensions" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="Android is purple, iOS is blue, and default is green."/>
             <BoxView 
                     FlexLayout.AlignSelf="Center"
                     WidthRequest="100"
                     HeightRequest="100"
-                    BackgroundColor="{OnPlatform Android=#333333, iOS=#CC3300, Default=Green}" />
+                    BackgroundColor="{OnPlatform Android=Purple, iOS=Blue, Default=Green}" />
 
             <!-- Caret Position and Color -->
             <Label Text="Position and Color (iOS only) of Caret" class="featureHeader" Margin="0,20,0,10"/>
@@ -77,6 +78,7 @@
             <!-- BoxView Corner Radius -->
             <Label Text="BoxView Corner Radius"  class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="Top left and bottom right corners should be rounded."/>
             <BoxView FlexLayout.AlignSelf="Center"
                      BackgroundColor="#CC3300"
                      WidthRequest="200"
@@ -85,23 +87,25 @@
                      />
 
             <!-- Slider Tap -->
-            <Label Text="Tap Slider to Set (iOS)" class="featureHeader" Margin="0,20,0,10"/>
+            <Label Text="[iOS] Tap Slider to Set" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <Slider
                 ios:Slider.UpdateOnTap="true"
+                MaximumTrackColor="Gray"
+                MinimumTrackColor="Purple"
             />
 
             <!-- Label Line Height -->
             <Label Text="Label Line Height" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-            <Label Text="Bacon ipsum dolor amet chicken pork loin ham hock andouille fatback picanha. Andouille picanha bresaola jerky meatball meatloaf, brisket fatback ball tip filet mignon biltong. Ham swine cow, turkey prosciutto bresaola jerky. Leberkas swine boudin, venison tail landjaeger ball tip chuck bacon andouille." 
+            <Label Text="LineHeight is 2. Bacon ipsum dolor amet chicken pork loin ham hock andouille fatback picanha. Andouille picanha bresaola jerky meatball meatloaf, brisket fatback ball tip filet mignon biltong. Ham swine cow, turkey prosciutto bresaola jerky. Leberkas swine boudin, venison tail landjaeger ball tip chuck bacon andouille." 
                     LineHeight="2"
                    />
 
             <!-- Editor Color, Placeholder Color -->
             <Label Text="Editor Placeholder / Placeholder Color" class="featureHeader" Margin="0,0,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-            <Editor Placeholder="Entry your long text" 
+            <Editor Placeholder="The placeholder color is purple." 
                     PlaceholderColor="Purple"/>
 
             <!-- Swipe Gesture -->

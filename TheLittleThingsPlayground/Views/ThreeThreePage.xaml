@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TheLittleThingsPlayground.Views.ThreeThreePage"
+             Title="3.3.0"
+             BackgroundColor="{OnPlatform Android=White}">
+    
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/Global.css"/>
+    </ContentPage.Resources>
+    
+    <ScrollView VerticalScrollBarVisibility="Always" 
+                HorizontalScrollBarVisibility="Never">
+        <FlexLayout Margin="15" Direction="Column">
+            
+            <!-- Underline and Strikethrough -->
+            <Label Text="Label/Span Underline and Strikethrough" TextDecorations="Underline"  class="featureHeader" Margin="0,0,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="Title above is underlined, and the cannot below is strikethrough."/>
+            <Label>
+                 <Label.FormattedText>
+                      <FormattedString>
+                          <Span Text="You " />
+                          <Span Text="cannot" TextDecorations="Strikethrough" />                              
+                          <Span Text=" can absolutely do underlines and strikethroughs now in Xamarin.Forms!"/>
+                      </FormattedString>
+                 </Label.FormattedText>
+            </Label>
+            
+            <!-- Label MaxLines -->
+            <Label Text="Label MaxLines" class="featureHeader"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label x:Name="TruncatedLabel" MaxLines="4" LineBreakMode="TailTruncation" Text="You should see 4 lines of text and truncation at the end. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis quam non enim pellentesque, ut placerat purus finibus. Nulla quis tincidunt ante. Ut mauris lectus, aliquam a sagittis vitae, consequat eget elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque convallis nunc nisi, a imperdiet elit efficitur et. Duis in lectus mollis, interdum ipsum et, tincidunt orci. Fusce ipsum metus, imperdiet non lacus vitae, facilisis feugiat magna. Nulla volutpat nisl tortor, a consectetur felis consectetur non. Curabitur in enim vulputate sem volutpat bibendum id nec lorem. Mauris laoreet lacus ac volutpat tempus."/>
+            <Button x:Name="ReadButton" Text="[read more]" Clicked="Button_Clicked" />
+            
+            <!-- iOS  Modal Presentation Style -->
+            <Label Text="[iOS] Modal Presentation Style" class="featureHeader"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Button Text="Open Modal" Clicked="Handle_Clicked" />
+            
+            <!-- iOS  WKWebView -->
+            <Label Text="[iOS] WebView now uses WKWebView" class="featureHeader"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Button Text="Open WebView" Clicked="Handle_Clicked_1" />
+            
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

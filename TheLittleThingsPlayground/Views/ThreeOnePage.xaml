@@ -28,7 +28,7 @@
             </Label>
             
             <!-- Drop Shadow -->
-            <Label Text="Drop Shadow  (iOS)" class="featureHeader" Margin="0,20,0,10"/>
+            <Label Text="[iOS] Drop Shadow" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
             <BoxView WidthRequest="100" HeightRequest="100"
                     x:Name="ShadowBox"
@@ -48,13 +48,15 @@
             <!-- Switch Color -->
             <Label Text="Switch Color" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-            <Switch OnColor="#CC3300" IsToggled="true" />
+            <Label Text="Switch is purple."/>
+            <Switch OnColor="Purple" IsToggled="true" />
 
             <!-- Slider  Color, ThumbImage -->
             <Label Text="Slider Color and ThumbImage" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-            <Slider ThumbImage="iconXamarin" 
-                    MinimumTrackColor="#B8D432" 
+            <Label Text="Track on the right is gray, and left is purple. The thumb is a mobile icon."/>
+            <Slider ThumbImage="{OnPlatform UWP=Assets/iconXamarin.png, Default=iconXamarin}" 
+                    MinimumTrackColor="Purple" 
                     MaximumTrackColor="Gray" 
                     Value="0.5"
                     Margin="0,10" />
@@ -62,11 +64,13 @@
             <!-- Return Button -->
             <Label Text="Return Button" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="The return button is configured as Send."/>
             <Entry Placeholder="Enter your text" HeightRequest="40" ReturnType="Send" />
 
             <!-- Auto Captialization -->
             <Label Text="Auto Capitalization" class="featureHeader" Margin="0,20,0,10"/>
             <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="This is currently set to CapitalizeNone"/>
             <Entry Placeholder="Enter your text" HeightRequest="40">
                 <Entry.Keyboard>
                     <Keyboard x:FactoryMethod="Create">
