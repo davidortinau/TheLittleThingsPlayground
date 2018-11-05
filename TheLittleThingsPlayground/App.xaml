@@ -8,6 +8,17 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
+
+            <ControlTemplate x:Key="MasterPage">
+                
+
+                <ScrollView VerticalScrollBarVisibility="Always" 
+                HorizontalScrollBarVisibility="Never">
+                    <FlexLayout Margin="15" Direction="Column">
+                        <ContentPresenter />
+                    </FlexLayout>
+                </ScrollView>
+            </ControlTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

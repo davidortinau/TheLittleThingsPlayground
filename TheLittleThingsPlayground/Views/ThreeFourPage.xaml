@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheLittleThingsPlayground.Views.ThreeFourPage"
+             Title="3.4.0-pre" ControlTemplate="{StaticResource MasterPage}">
+
+
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/Global.css"/>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Button Text="Release Notes" Clicked="Button_Clicked"/>
+
+            <!-- Underline and Strikethrough -->
+            <Label Text="Label/Span Underline and Strikethrough" TextDecorations="Underline"  class="featureHeader" Margin="0,0,0,10"/>
+            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+            <Label Text="Title above is underlined, and the cannot below is strikethrough."/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="You " />
+                        <Span Text="cannot" TextDecorations="Strikethrough" />
+                        <Span Text=" can absolutely do underlines and strikethroughs now in Xamarin.Forms!"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+    </StackLayout>
+</ContentPage>
