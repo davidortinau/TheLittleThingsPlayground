@@ -12,18 +12,9 @@
     <StackLayout>
         <Button Text="Release Notes" Clicked="Button_Clicked"/>
 
-            <!-- Underline and Strikethrough -->
-            <Label Text="Label/Span Underline and Strikethrough" TextDecorations="Underline"  class="featureHeader" Margin="0,0,0,10"/>
-            <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-            <Label Text="Title above is underlined, and the cannot below is strikethrough."/>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="You " />
-                        <Span Text="cannot" TextDecorations="Strikethrough" />
-                        <Span Text=" can absolutely do underlines and strikethroughs now in Xamarin.Forms!"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+        <!-- Underline and Strikethrough -->
+        <Label Text="ImageButton" class="featureHeader" Margin="0,0,0,10"/>
+        <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+        <ImageButton Source="xamarin_logo.png" Clicked="ImageButton_Clicked" Aspect="AspectFill" BorderColor="Purple"  BorderWidth="3" AutomationProperties.HelpText="This is an image" />
     </StackLayout>
 </ContentPage>
