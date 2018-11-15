@@ -24,6 +24,11 @@
                 <views:ThreeThreePage />
             </x:Arguments>
         </NavigationPage>
+        <NavigationPage Title="3.4.0-pre1" Icon="{OnPlatform UWP=Assets/iconXamagon.png, Default=tab_threeone.png}">
+            <x:Arguments>
+                <views:ThreeFourPage />
+            </x:Arguments>
+        </NavigationPage>
         <NavigationPage Title="About" Icon="{OnPlatform UWP=Assets/tab_about.png, Default=tab_about.png}">
             <x:Arguments>
                 <views:AboutPage />
