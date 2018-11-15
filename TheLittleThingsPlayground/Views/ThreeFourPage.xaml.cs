@@ -19,7 +19,7 @@ namespace TheLittleThingsPlayground.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Browser.OpenAsync("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.4/3.4.0-pre2/");
+            Browser.OpenAsync("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.4/3.4.0/");
 
         }
 

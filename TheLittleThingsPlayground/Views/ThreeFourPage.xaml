@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheLittleThingsPlayground.Views.ThreeFourPage"
-             Title="3.4.0-pre" ControlTemplate="{StaticResource MasterPage}">
+             Title="3.4.0" ControlTemplate="{StaticResource MasterPage}">
 
 
     <ContentPage.Resources>
@@ -15,6 +15,9 @@
         <!-- Underline and Strikethrough -->
         <Label Text="ImageButton" class="featureHeader" Margin="0,0,0,10"/>
         <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-        <ImageButton Source="xamarin_logo.png" Clicked="ImageButton_Clicked" Aspect="AspectFill" BorderColor="Purple"  BorderWidth="3" AutomationProperties.HelpText="This is an image" />
+        <ImageButton Source="iconXamagon.png" Clicked="ImageButton_Clicked" Aspect="AspectFit" 
+                     HeightRequest="50"
+                     BackgroundColor="Transparent"
+                     AutomationProperties.HelpText="Xamarin Logo" />
     </StackLayout>
 </ContentPage>
