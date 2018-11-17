@@ -67,5 +67,11 @@ namespace TheLittleThingsPlayground.Views
         {
             await Browser.OpenAsync("https://microsoft.com");
         }
+
+        private void ReleaseNotes_Clicked(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.2/3.2.0/");
+
+        }
     }
 }

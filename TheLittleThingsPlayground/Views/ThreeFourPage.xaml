@@ -4,19 +4,44 @@
              x:Class="TheLittleThingsPlayground.Views.ThreeFourPage"
              Title="3.4.0" ControlTemplate="{StaticResource MasterPage}">
 
-
     <ContentPage.Resources>
         <StyleSheet Source="../Styles/Global.css"/>
     </ContentPage.Resources>
 
-    <StackLayout>
-        <Button Text="Release Notes" Clicked="Button_Clicked"/>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Release Notes" Clicked="ReleaseNotes_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <FlexLayout Direction="Column">
 
         <!-- Underline and Strikethrough -->
         <Label Text="ImageButton" class="featureHeader" Margin="0,0,0,10"/>
         <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-        <ImageButton Source="iconXamagon.png" Clicked="ImageButton_Clicked" Aspect="AspectFit" 
-                     HeightRequest="50"   
-                     AutomationProperties.HelpText="Xamarin Logo" />
-    </StackLayout>
+        <ImageButton Source="xamagon.png" 
+                     BackgroundColor="Transparent"
+                     WidthRequest="300"
+                     HeightRequest="300"
+                     FlexLayout.AlignSelf="Center"
+                     FlexLayout.Grow="1"
+                     Clicked="ImageButton_Clicked"
+                     Aspect="AspectFit">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="1"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="0.8"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </ImageButton>
+
+    </FlexLayout>
 </ContentPage>

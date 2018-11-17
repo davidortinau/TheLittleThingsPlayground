@@ -8,7 +8,11 @@
     <ContentPage.Resources>
         <StyleSheet Source="../Styles/Global.css"/>
     </ContentPage.Resources>
-    
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Release Notes" Clicked="ReleaseNotes_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <!-- TitleView -->
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">

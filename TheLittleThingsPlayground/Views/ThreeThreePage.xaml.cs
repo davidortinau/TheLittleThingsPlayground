@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TheLittleThingsPlayground.Views
@@ -35,6 +35,12 @@ namespace TheLittleThingsPlayground.Views
                 ReadButton.Text = "[read more]";
             }
             
+        }
+
+        private void ReleaseNotes_Clicked(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.3/3.3.0/");
+
         }
     }
 }
