@@ -25,7 +25,7 @@ namespace TheLittleThingsPlayground.Views
 
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Success", "Nice tap!", "Close");
+            DisplayAlert("Wow", "Hello ImageButton!", "Cya");
         }
     }
 }
