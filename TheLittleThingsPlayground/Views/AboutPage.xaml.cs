@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TheLittleThingsPlayground.Views
@@ -25,7 +23,8 @@ namespace TheLittleThingsPlayground.Views
 
         async void HandleAction(string url)
         {
-            await Browser.OpenAsync(url);
+            //await Browser.OpenAsync(url);
+            Device.OpenUri(new System.Uri(url));
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace TheLittleThingsPlayground.Views
@@ -60,17 +58,17 @@ namespace TheLittleThingsPlayground.Views
 
         async void HandleAction(string url)
         {
-            await Browser.OpenAsync(url);
+           // await Browser.OpenAsync(url);
         }
 
         async void Handle_Tapped(object sender, System.EventArgs e)
         {
-            await Browser.OpenAsync("https://microsoft.com");
+            Device.OpenUri(new System.Uri("https://microsoft.com"));
         }
 
         private void ReleaseNotes_Clicked(object sender, EventArgs e)
         {
-            Browser.OpenAsync("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.2/3.2.0/");
+            Device.OpenUri(new System.Uri("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.2/3.2.0/"));
 
         }
     }

@@ -5,6 +5,7 @@
             x:Class="TheLittleThingsPlayground.Views.MainPage"
             BarBackgroundColor="#f1f1f1"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.IsSwipePagingEnabled="False"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="#999999"
             android:TabbedPage.BarSelectedItemColor="Black">

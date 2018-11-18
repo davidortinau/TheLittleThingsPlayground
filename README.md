@@ -1,9 +1,9 @@
 # TheLittleThingsPlayground
 Playground for experimenting with new Xamarin.Forms features.
 
-## ThreeThree (Xamarin.Forms 3.4.0-pre)
+## ThreeThree (Xamarin.Forms 3.4.0)
 
-[Release Notes](https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.4/3.4.0-pre2/)
+[Release Notes](https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.4/3.4.0/)
 
 * ImageButton
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,7 +18,7 @@ namespace TheLittleThingsPlayground.Views
 
         private void ReleaseNotes_Clicked(object sender, EventArgs e)
         {
-            Browser.OpenAsync("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.4/3.4.0/");
+            Device.OpenUri(new System.Uri("https://developer.xamarin.com/releases/xamarin-forms/xamarin-forms-3.4/3.4.0/"));
 
         }
 
