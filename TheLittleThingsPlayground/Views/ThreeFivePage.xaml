@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:demoVMs="clr-namespace:Demos.ViewModels"
+             x:Class="TheLittleThingsPlayground.Views.ThreeFivePage"
+             Title="3.5.0-pre" 
+             ControlTemplate="{StaticResource MasterPage}">
+    
+    <ContentPage.BindingContext>
+        <demoVMs:DemoViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/Global.css"/>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Release Notes" Clicked="ReleaseNotes_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    
+    <StackLayout>
+
+        <!-- BindableLayout -->
+        <Label Text="BindableLayout" class="featureHeader" Margin="0,0,0,10"/>
+        <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+        
+        <FlexLayout Wrap="Wrap" Direction="Row" FlexLayout.Grow="1" JustifyContent="SpaceBetween"
+                    BindableLayout.ItemsSource="{Binding ColorViewModels, Mode=OneTime}"
+                    >
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout 
+                        Margin="10" 
+                        Spacing="10" MinimumHeightRequest="40"
+                        FlexLayout.Basis="30%" 
+                        x:DataType="demoVMs:ColorViewModel">
+                        <BoxView HorizontalOptions="FillAndExpand" 
+                                 HeightRequest="20" 
+                                 BackgroundColor="{Binding HexColor}"/>
+                        <Label Text="{Binding Name}" 
+                               HorizontalOptions="FillAndExpand" 
+                               HorizontalTextAlignment="Center"
+                               FontSize="10" />
+                    </StackLayout>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
+        
+    </StackLayout>
+    
+
+</ContentPage>

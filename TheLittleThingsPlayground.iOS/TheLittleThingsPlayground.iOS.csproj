@@ -132,6 +132,8 @@
     <BundleResource Include="Resources\iconXamagon.png" />
     <BundleResource Include="Resources\iconXamagon%402x.png" />
     <BundleResource Include="Resources\iconXamagon%403x.png" />
+    <BundleResource Include="Resources\3bar%402x.png" />
+    <BundleResource Include="Resources\3bar.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -141,7 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>3.4.0.1008975</Version>
+      <Version>4.0.0.8055-pre1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
