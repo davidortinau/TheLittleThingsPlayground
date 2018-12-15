@@ -17,7 +17,7 @@
         <ShellContent Title="3.5.0-pre" ContentTemplate="{DataTemplate views:ThreeFivePage}" Icon="iconXamagon"/>
     </ShellItem>
     
-    <ShellContent Title="About" ContentTemplate="{DataTemplate views:AboutPage}" FlyoutIcon="tab_about" />
+    <ShellContent Title="About" ContentTemplate="{DataTemplate views:AboutPage}" Icon="tab_about" />
     
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>

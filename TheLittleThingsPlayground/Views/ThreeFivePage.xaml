@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:demoVMs="clr-namespace:Demos.ViewModels"
              x:Class="TheLittleThingsPlayground.Views.ThreeFivePage"
+             Shell.TabBarIsVisible="False"
              Title="3.5.0-pre" 
              ControlTemplate="{StaticResource MasterPage}">
     
