@@ -4,7 +4,7 @@
        xmlns:views="clr-namespace:TheLittleThingsPlayground.Views"
        x:Class="TheLittleThingsPlayground.AppShell"
        FlyoutHeaderBehavior="Fixed"
-       Route=""
+       Route="root"
        RouteHost="microsoft.com"
        RouteScheme="app"
        >
@@ -14,7 +14,7 @@
         <ShellContent Title="3.2.0" ContentTemplate="{DataTemplate views:ThreeTwoPage}" Icon="iconXamagon"/>
         <ShellContent Title="3.3.0" ContentTemplate="{DataTemplate views:ThreeThreePage}" Icon="iconXamagon"/>
         <ShellContent Title="3.4.0" ContentTemplate="{DataTemplate views:ThreeFourPage}" Icon="iconXamagon"/>
-        <ShellContent Title="3.5.0-pre" ContentTemplate="{DataTemplate views:ThreeFivePage}" Icon="iconXamagon"/>
+        <ShellContent Route="three_five" Title="3.5.0-pre" ContentTemplate="{DataTemplate views:ThreeFivePage}" Icon="iconXamagon"/>
     </ShellItem>
     
     <ShellContent Title="About" ContentTemplate="{DataTemplate views:AboutPage}" Icon="tab_about" />

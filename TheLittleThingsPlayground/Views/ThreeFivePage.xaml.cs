@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using TheLittleThingsPlayground.Utils;
 using Xamarin.Forms;
 
 namespace TheLittleThingsPlayground.Views
 {
     public partial class ThreeFivePage : ContentPage
     {
-
-
         public ThreeFivePage()
         {
             InitializeComponent();
@@ -20,5 +18,12 @@ namespace TheLittleThingsPlayground.Views
 
         }
 
+        async void ViewSource_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new ViewSourcePage
+            {
+                Source = XamlUtil.GetXamlForType(typeof(ThreeFivePage))
+            });
+        }
     }
 }

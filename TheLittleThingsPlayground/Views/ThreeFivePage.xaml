@@ -14,18 +14,18 @@
     <ContentPage.Resources>
         <StyleSheet Source="../Styles/Global.css"/>
     </ContentPage.Resources>
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Release Notes" Clicked="ReleaseNotes_Clicked"/>
-    </ContentPage.ToolbarItems>
     
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Release Notes" Icon="iconReleaseNotes" Clicked="ReleaseNotes_Clicked"/>
+        <ToolbarItem Text="XAML" Icon="iconXaml" Clicked="ViewSource_Clicked" />
+    </ContentPage.ToolbarItems>
     
     <StackLayout>
 
         <!-- BindableLayout -->
-        <Label Text="BindableLayout" class="featureHeader" Margin="0,0,0,10"/>
+        <Label Text="BindableLayout" class="featureHeader"  FontSize="Large" Margin="0,0,0,10"/>
         <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-        
+
         <FlexLayout Wrap="Wrap" Direction="Row" FlexLayout.Grow="1" JustifyContent="SpaceBetween"
                     BindableLayout.ItemsSource="{Binding ColorViewModels, Mode=OneTime}"
                     >

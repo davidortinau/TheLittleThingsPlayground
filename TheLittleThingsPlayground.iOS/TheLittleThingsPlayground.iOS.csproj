@@ -134,6 +134,13 @@
     <BundleResource Include="Resources\iconXamagon%403x.png" />
     <BundleResource Include="Resources\3bar%402x.png" />
     <BundleResource Include="Resources\3bar.png" />
+    <BundleResource Include="Resources\FabMDL2.ttf" />
+    <BundleResource Include="Resources\iconReleaseNotes.png" />
+    <BundleResource Include="Resources\iconReleaseNotes%402x.png" />
+    <BundleResource Include="Resources\iconReleaseNotes%403x.png" />
+    <BundleResource Include="Resources\iconXaml.png" />
+    <BundleResource Include="Resources\iconXaml%402x.png" />
+    <BundleResource Include="Resources\iconXaml%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

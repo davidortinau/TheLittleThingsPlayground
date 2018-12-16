@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheLittleThingsPlayground.Utils;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TheLittleThingsPlayground.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ThreeFourPage : ContentPage
-	{
-		public ThreeFourPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ThreeFourPage : ContentPage
+    {
+        public ThreeFourPage()
+        {
+            InitializeComponent();
+        }
 
         private void ReleaseNotes_Clicked(object sender, EventArgs e)
         {
@@ -25,6 +26,14 @@ namespace TheLittleThingsPlayground.Views
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Wow", "Hello ImageButton!", "Cya");
+        }
+
+        async void ViewSource_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new ViewSourcePage
+            {
+                Source = XamlUtil.GetXamlForType(typeof(ThreeFourPage))
+            });
         }
     }
 }

@@ -34,5 +34,9 @@
 	<string>TheLittleThingsPlayground</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FabMDL2.ttf</string>
+	</array>
 </dict>
 </plist>

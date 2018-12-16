@@ -17,6 +17,17 @@
                     </FlexLayout>
                 </ScrollView>
             </ControlTemplate>
+            
+            <Style x:Key="IconFont" TargetType="Label">  
+               <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" Default="Fabric MDL2 Assets">
+                            <On Platform="iOS" Value="Fabric MDL2 Assets"></On>
+                            <On Platform="Android" Value="FabMDL2.ttf#Fabric MDL2 Assets"></On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

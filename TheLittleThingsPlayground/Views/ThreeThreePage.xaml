@@ -11,7 +11,8 @@
     </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Release Notes" Clicked="ReleaseNotes_Clicked" />
+        <ToolbarItem Text="Release Notes" Icon="iconReleaseNotes" Clicked="ReleaseNotes_Clicked"/>
+        <ToolbarItem Text="XAML" Icon="iconXaml" Clicked="ViewSource_Clicked" />
     </ContentPage.ToolbarItems>
 
     <ScrollView VerticalScrollBarVisibility="Always" 

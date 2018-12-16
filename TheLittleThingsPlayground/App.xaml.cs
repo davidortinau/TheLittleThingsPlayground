@@ -2,8 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using TheLittleThingsPlayground.Views;
+using Xamarin.Forms.Internals;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Skip)]
 namespace TheLittleThingsPlayground
 {
     public partial class App : Application
@@ -13,8 +14,9 @@ namespace TheLittleThingsPlayground
         {
             InitializeComponent();
 
-
             MainPage = new AppShell();
+
+
         }
 
         protected override void OnStart()

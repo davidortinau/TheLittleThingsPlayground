@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using TheLittleThingsPlayground.Views;
 using Xamarin.Forms;
 
 namespace TheLittleThingsPlayground
@@ -10,6 +10,8 @@ namespace TheLittleThingsPlayground
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute("source", typeof(ViewSourcePage));
         }
     }
 }
