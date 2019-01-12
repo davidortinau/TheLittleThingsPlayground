@@ -1,6 +1,7 @@
 ﻿using System;
 using TheLittleThingsPlayground.Utils;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml.Internals;
 
 namespace TheLittleThingsPlayground.Views
 {
@@ -32,6 +33,11 @@ namespace TheLittleThingsPlayground.Views
             {
                 Source = XamlUtil.GetXamlForType(typeof(ThreeOnePage))
             });
+
+            //var choice = await DisplayActionSheet("Actions", "Close", "destroy",
+            //"Release Notes",
+            //"View XAML Source",
+            //"Documentation");
         }
     }
 }

@@ -14,6 +14,7 @@ namespace TheLittleThingsPlayground
         {
             InitializeComponent();
 
+
             MainPage = new AppShell();
 
 
