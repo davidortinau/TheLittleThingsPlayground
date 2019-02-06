@@ -5,7 +5,8 @@
              x:Class="TheLittleThingsPlayground.Views.ThreeFivePage"
              Shell.TabBarIsVisible="False"
              Title="3.5.0-pre" 
-             ControlTemplate="{StaticResource MasterPage}">
+             ControlTemplate="{StaticResource MasterPage}"
+             >
     
     <ContentPage.BindingContext>
         <demoVMs:DemoViewModel />
@@ -15,9 +16,16 @@
         <StyleSheet Source="../Styles/Global.css"/>
     </ContentPage.Resources>
     
+    <!-- New Toolbar a11y support-->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Release Notes" Icon="iconReleaseNotes" Clicked="ReleaseNotes_Clicked"/>
-        <ToolbarItem Text="XAML" Icon="iconXaml" Clicked="ViewSource_Clicked" />
+        <ToolbarItem Text="Release Notes" Icon="iconReleaseNotes" Clicked="ReleaseNotes_Clicked" 
+                     AutomationProperties.Name="Release Notes Button"
+                     AutomationProperties.HelpText="Tap here to open release notes in a browser."
+                     />
+        <ToolbarItem Text="XAML" Icon="iconXaml" Clicked="ViewSource_Clicked" 
+                     AutomationProperties.Name="View XAML Button"
+                     AutomationProperties.HelpText="Tap here to view the XAML for this page."
+                     />
     </ContentPage.ToolbarItems>
     
     <StackLayout>
@@ -26,28 +34,46 @@
         <Label Text="BindableLayout" class="featureHeader"  FontSize="Large" Margin="0,0,0,10"/>
         <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
 
-        <FlexLayout Wrap="Wrap" Direction="Row" FlexLayout.Grow="1" JustifyContent="SpaceBetween"
-                    BindableLayout.ItemsSource="{Binding ColorViewModels, Mode=OneTime}"
-                    >
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout 
-                        Margin="10" 
-                        Spacing="10" MinimumHeightRequest="40"
-                        FlexLayout.Basis="30%" 
-                        x:DataType="demoVMs:ColorViewModel">
-                        <BoxView HorizontalOptions="FillAndExpand" 
-                                 HeightRequest="20" 
-                                 BackgroundColor="{Binding HexColor}"/>
-                        <Label Text="{Binding Name}" 
-                               HorizontalOptions="FillAndExpand" 
-                               HorizontalTextAlignment="Center"
-                               FontSize="10" />
-                    </StackLayout>
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </FlexLayout>
-        
+        <ScrollView HeightRequest="200" HorizontalOptions="Fill">
+            <FlexLayout Wrap="Wrap" Direction="Row" FlexLayout.Grow="1" JustifyContent="SpaceBetween"
+                        BindableLayout.ItemsSource="{Binding ColorViewModels, Mode=OneTime}"
+                        >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout 
+                            Margin="10" 
+                            Spacing="10" MinimumHeightRequest="40"
+                            FlexLayout.Basis="30%" 
+                            x:DataType="demoVMs:ColorViewModel">
+                            <BoxView HorizontalOptions="FillAndExpand" 
+                                     HeightRequest="20" 
+                                     BackgroundColor="{Binding HexColor}"/>
+                            <Label Text="{Binding Name}" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   HorizontalTextAlignment="Center"
+                                   FontSize="10" />
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+
+
+        <Label Text="TextColor on TableSection + SwitchCell OnColor" class="featureHeader" FontSize="Large" Margin="0,0,0,10"/>
+        <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Vibrate" TextColor="Green">
+                    <SwitchCell Text="Vibrate on Ring" On="False" OnColor="Green" />
+                    <SwitchCell Text="Vibrate on Silent" On="True" OnColor="Green" />
+                </TableSection>
+                <TableSection Title="Vibrate" TextColor="Purple">
+                    <SwitchCell Text="Vibrate on Ring" OnColor="Purple"/>
+                    <SwitchCell Text="Vibrate on Silent" On="true" OnColor="Purple" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </StackLayout>
     
 

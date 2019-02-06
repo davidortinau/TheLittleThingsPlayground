@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TheLittleThingsPlayground.Views.ThreeFourPage"
              Shell.TabBarIsVisible="False"
-             Title="3.4.0" ControlTemplate="{StaticResource MasterPage}">
+             Title="3.4.0" 
+             ControlTemplate="{StaticResource MasterPage}"
+             >
 
     <ContentPage.Resources>
         <StyleSheet Source="../Styles/Global.css"/>

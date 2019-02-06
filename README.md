@@ -1,11 +1,14 @@
 # TheLittleThingsPlayground
 Playground for experimenting with new Xamarin.Forms features.
 
-## ThreeFive (Xamarin.Forms 3.5.0-pre)
+## ThreeFive (Xamarin.Forms 3.5.0)
 
-[Release Notes](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/3.5/3.5.0-pre2)
+[Release Notes](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/3.5/3.5.0)
 
 * BindableLayout
+* ListView ScrollBarVisibility
+* SwitchCell OnColor
+* ToolbarItem, MasterDetailPage, NavigationPage a11y
 
 ## ThreeFour (Xamarin.Forms 3.4.0)
 

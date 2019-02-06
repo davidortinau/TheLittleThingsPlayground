@@ -14,7 +14,7 @@ namespace TheLittleThingsPlayground.Views
 
         private void ReleaseNotes_Clicked(object sender, EventArgs e)
         {
-            Device.OpenUri(new System.Uri("https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/3.5/3.5.0-pre2"));
+            Device.OpenUri(new System.Uri("https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/3.5/3.5.0"));
 
         }
 
