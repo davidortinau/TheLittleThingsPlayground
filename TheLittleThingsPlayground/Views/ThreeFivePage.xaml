@@ -4,7 +4,7 @@
              xmlns:demoVMs="clr-namespace:Demos.ViewModels"
              x:Class="TheLittleThingsPlayground.Views.ThreeFivePage"
              Shell.TabBarIsVisible="False"
-             Title="3.5.0-pre" 
+             Title="3.5.0" 
              ControlTemplate="{StaticResource MasterPage}"
              >
     
@@ -58,8 +58,8 @@
             </FlexLayout>
         </ScrollView>
 
-
-        <Label Text="TextColor on TableSection + SwitchCell OnColor" class="featureHeader" FontSize="Large" Margin="0,0,0,10"/>
+        <!-- TextColor and OnColor -->
+        <Label Text="TextColor on TableSection + SwitchCell OnColor" class="featureHeader" />
         <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
 
         <TableView Intent="Settings">
@@ -74,6 +74,8 @@
                 </TableSection>
             </TableRoot>
         </TableView>
+        
+        
     </StackLayout>
     
 
