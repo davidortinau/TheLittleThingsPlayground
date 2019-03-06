@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Slider"
+             Visual="Material"
+             Shell.TabBarIsVisible="False"
+             x:Class="VisualTesting.Pages.SlidersPage">
+    
+    <ScrollView>
+		<StackLayout Spacing="20" Padding="10"  BackgroundColor="White">
+            <Label Text="Default" Margin="0,0,0,-10" />
+            <Slider Minimum="-100" Maximum="100" />
+
+            <Label Text="Default (Disabled)" Margin="0,0,0,-10" />
+            <Slider Minimum="-100" Maximum="100" IsEnabled="false" />
+
+            <Label Text="Custom Primary Color" Margin="0,0,0,-10" />
+            <Slider Minimum="-100" Maximum="100"
+                    ThumbColor="{StaticResource PrimaryColor}" 
+                    MinimumTrackColor="{StaticResource PrimaryColor}" />
+
+            <Label Text="Custom Primary Color (Disabled)" Margin="0,0,0,-10" />
+            <Slider Minimum="-100" Maximum="100" IsEnabled="false"
+                    ThumbColor="{StaticResource PrimaryColor}" 
+                    MaximumTrackColor="{StaticResource QuinaryColor}" 
+                    MinimumTrackColor="{StaticResource PrimaryColor}" />
+
+            <Label Text="Custom" Margin="0,0,0,-10" />
+            <Slider Minimum="-100" Maximum="100"
+                    ThumbColor="{StaticResource QuinaryColor}" 
+                    MaximumTrackColor="{StaticResource SecondaryColor}" 
+                    MinimumTrackColor="{StaticResource PrimaryColor}" />
+
+            <Label Text="Custom (Disabled)" Margin="0,0,0,-10" />
+            <Slider Minimum="-100" Maximum="100" IsEnabled="false"
+                    ThumbColor="{StaticResource QuinaryColor}" 
+                    MaximumTrackColor="{StaticResource SecondaryColor}" 
+                    MinimumTrackColor="{StaticResource PrimaryColor}" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

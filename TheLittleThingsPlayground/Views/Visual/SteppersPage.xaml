@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Visual="Material" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Stepper"
+             Shell.TabBarIsVisible="False"
+             x:Class="VisualTesting.Pages.SteppersPage">
+    <ContentPage.Content>
+		<ScrollView>
+            <StackLayout Spacing="20" Padding="10"  >
+    			<Stepper></Stepper>
+				<Stepper HeightRequest="100" WidthRequest="100"></Stepper>
+				<Stepper WidthRequest="100"></Stepper>
+				<Stepper HeightRequest="100"></Stepper>
+                <Stepper WidthRequest="100"></Stepper>
+			</StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

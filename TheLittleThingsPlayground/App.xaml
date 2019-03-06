@@ -3,10 +3,27 @@
     <Application.Resources>
         <ResourceDictionary>
             <!--Global Styles-->
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="PrimaryColor">#0078D7</Color>
+            <Color x:Key="SecondaryColor">#FFB900</Color>
+            <Color x:Key="TertiaryColor">#00A4EF</Color>
+            <Color x:Key="QuaternaryColor">#7FBA00</Color>
+            <Color x:Key="QuinaryColor">#F25022</Color>
+            
+            <Color x:Key="PrimaryTextColor">#ffffff</Color>
+            <Color x:Key="SecondaryTextColor">#ffffff</Color>
+            <Color x:Key="TertiaryTextColor">#ffffff</Color>
+            <Color x:Key="QuaternaryTextColor">#ffffff</Color>
+            <Color x:Key="QuinaryTextColor">#ffffff</Color>
+            
+            <Color x:Key="TextColor">#1d1d1d</Color>
+            
+            <Color x:Key="DarkRedColor">#D32F2F</Color>
+            <Color x:Key="LightRedColor">#FFCDD2</Color>
+
+            
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
             </Style>
 
             <ControlTemplate x:Key="MasterPage">

@@ -5,6 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
+using VisualTesting.Pages;
+using Xamarin.Forms;
 
 namespace Demos.ViewModels
 {
@@ -20,7 +23,6 @@ namespace Demos.ViewModels
                 if (field != null && !String.IsNullOrEmpty(field.Name))
                     _colors.Add(field.Name);
             }
-
         }
 
         List<string> _colors;
