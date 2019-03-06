@@ -2,14 +2,27 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
        xmlns:views="clr-namespace:TheLittleThingsPlayground.Views"
+       xmlns:visuals="clr-namespace:VisualTesting.Pages"
        x:Class="TheLittleThingsPlayground.AppShell"
        FlyoutHeaderBehavior="Fixed"
-       Route="root"
+       Route=""
        RouteHost="microsoft.com"
        RouteScheme="app"
        >
     
-    <ShellItem FlyoutDisplayOptions="AsMultipleItems" Title="Releases">
+    <Shell.Resources>
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.ShellBackgroundColor" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="Shell.ShellForegroundColor" Value="White" />
+            <Setter Property="Shell.ShellTitleColor" Value="{StaticResource PrimaryTextColor}" />
+            <Setter Property="Shell.ShellDisabledColor" Value="#B4FFFFFF" />
+            <Setter Property="Shell.ShellUnselectedColor" Value="#95FFFFFF" />
+        </Style>
+        <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+    </Shell.Resources>
+    
+    <ShellItem FlyoutDisplayOptions="AsMultipleItems" Title="Releases" Route="releases">
+        <ShellContent Route="three_six" Title="3.6.0" ContentTemplate="{DataTemplate views:ThreeSixPage}" Icon="iconXamagon"/>
         <ShellContent Route="three_five" Title="3.5.0" ContentTemplate="{DataTemplate views:ThreeFivePage}" Icon="iconXamagon"/>
         <ShellContent Title="3.4.0" ContentTemplate="{DataTemplate views:ThreeFourPage}" Icon="iconXamagon"/>
         <ShellContent Title="3.3.0" ContentTemplate="{DataTemplate views:ThreeThreePage}" Icon="iconXamagon"/>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="ProgressBar"
+             Visual="Material"
+             Shell.TabBarIsVisible="False"
+             x:Class="VisualTesting.Pages.ProgressPage">
+    
+    <ScrollView>
+		<StackLayout Spacing="20" Padding="10"  BackgroundColor="White">
+            <Label Text="Animating" Margin="0,0,0,-10" />
+            <ProgressBar Progress="{Binding PercentageCounter}" />
+            
+            <Label Text="Animating with height" Margin="0,0,0,-10" />
+            <ProgressBar HeightRequest="30" Progress="{Binding PercentageCounter}" />
+
+            <Label Text="At 50%" Margin="0,0,0,-10" />
+            <ProgressBar Progress="0.5" />
+
+            <Label Text="At 0%" Margin="0,0,0,-10" />
+            <ProgressBar />
+
+            <Label Text="Custom Primary Color" Margin="0,0,0,-10" />
+            <ProgressBar Progress="0.5" ProgressColor="{StaticResource PrimaryColor}" />
+
+            <Label Text="Custom Background Color" Margin="0,0,0,-10" />
+            <ProgressBar Progress="0.5" BackgroundColor="{StaticResource SecondaryColor}" />
+
+            <Label Text="Custom" Margin="0,0,0,-10" />
+            <ProgressBar Progress="0.5" ProgressColor="{StaticResource PrimaryColor}" BackgroundColor="{StaticResource SecondaryColor}" />
+                    
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
