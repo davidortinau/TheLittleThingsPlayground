@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:demoVMs="clr-namespace:Demos.ViewModels"
              x:Class="TheLittleThingsPlayground.Views.ThreeSixPage"
              Shell.TabBarIsVisible="False"
              Title="3.6.0" 
              ControlTemplate="{StaticResource MasterPage}">
     
-    <ContentPage.BindingContext>
-        <demoVMs:DemoViewModel />
-    </ContentPage.BindingContext>
-    
     <ContentPage.Resources>
         <StyleSheet Source="../Styles/Global.css"/>
+        <StyleSheet>
+            <![CDATA[
+            ^Button {
+                margin: 8;
+                font-size: 12;
+            }
+            ]]>
+        </StyleSheet>
     </ContentPage.Resources>
     
     <ContentPage.ToolbarItems>
@@ -37,17 +40,17 @@
         <!-- Visual -->
         <Label Text="Visual - Material controls" class="featureHeader" />
         <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
-        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween" Visual="Material">
-            <Button Text="ActivityIndicator" Command="{Binding GoToVisualPage}" CommandParameter="ActivityIndicatorsPage"/>
+        <StackLayout Visual="Material">
+            <Button Text="ActivityIndicator" Command="{Binding GoToVisualPage}" CommandParameter="activityindicators"/>
             <Button Text="Button" Command="{Binding GoToVisualPage}" CommandParameter="buttons"/>
-            <Button Text="Card" Command="{Binding GoToVisualPage}" CommandParameter="CardsPage"/>
-            <Button Text="Editor" Command="{Binding GoToVisualPage}" CommandParameter="EditorsPage"/>
-            <Button Text="Entry" Command="{Binding GoToVisualPage}" CommandParameter="EntriesPage"/>
-            <Button Text="Picker" Command="{Binding GoToVisualPage}" CommandParameter="PickersPage"/>
-            <Button Text="Progress" Command="{Binding GoToVisualPage}" CommandParameter="ProgressPage"/>
-            <Button Text="Slider" Command="{Binding GoToVisualPage}" CommandParameter="SlidersPage"/>
-            <Button Text="Stepper" Command="{Binding GoToVisualPage}" CommandParameter="SteppersPage"/>
-        </FlexLayout>
+            <Button Text="Card" Command="{Binding GoToVisualPage}" CommandParameter="cards"/>
+            <Button Text="Editor" Command="{Binding GoToVisualPage}" CommandParameter="editors"/>
+            <Button Text="Entry" Command="{Binding GoToVisualPage}" CommandParameter="entries"/>
+            <Button Text="Picker" Command="{Binding GoToVisualPage}" CommandParameter="pickers"/>
+            <Button Text="Progress" Command="{Binding GoToVisualPage}" CommandParameter="progress"/>
+            <Button Text="Slider" Command="{Binding GoToVisualPage}" CommandParameter="sliders"/>
+            <Button Text="Stepper" Command="{Binding GoToVisualPage}" CommandParameter="steppers"/>
+        </StackLayout>
         
         
     </StackLayout>

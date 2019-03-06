@@ -150,6 +150,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Media.xcassets\Image.imageset\First.pdf">
       <Visible>false</Visible>
     </ImageAsset>
+    <BundleResource Include="Resources\iconXamarinBlue.png" />
+    <BundleResource Include="Resources\iconXamarinBlue%402x.png" />
+    <BundleResource Include="Resources\iconXamarinBlue%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

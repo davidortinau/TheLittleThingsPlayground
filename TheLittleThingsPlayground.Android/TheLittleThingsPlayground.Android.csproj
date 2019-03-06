@@ -109,6 +109,11 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\iconXaml.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\iconReleaseNotes.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\iconXaml.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\iconXamarinBlue.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\iconXamarinBlue.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\iconXamarinBlue.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\iconXamarinBlue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\iconXamarinBlue.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\xamagon.png" />
@@ -124,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.220655</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>3.6.0.220655</Version>
     </PackageReference>
   </ItemGroup>

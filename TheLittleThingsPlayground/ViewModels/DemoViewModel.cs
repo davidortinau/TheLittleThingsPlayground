@@ -15,8 +15,6 @@ namespace Demos.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public ICommand GoToVisualPage { get; set; }
-
         public DemoViewModel()
         {
             _colors = new List<string>();
@@ -25,15 +23,6 @@ namespace Demos.ViewModels
                 if (field != null && !String.IsNullOrEmpty(field.Name))
                     _colors.Add(field.Name);
             }
-
-            GoToVisualPage = new Command<string>(HandleVisualNav);
-        }
-
-        private async void HandleVisualNav(string page)
-        {
-            //Console.WriteLine($"route: {Shell.CurrentShell.CurrentState.Location.AbsolutePath}");
-            await Shell.CurrentShell.GoToAsync($"{page}", true);
-            //await Shell.CurrentShell.Navigation.PushAsync(new ButtonsPage(), true);
         }
 
         List<string> _colors;

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:utils="clr-namespace:TheLittleThingsPlayground.Utils"
              Title="CardView"
+             Visual="Material"
+             Shell.TabBarIsVisible="False"
              x:Class="VisualTesting.Pages.CardsPage">
     
     <ScrollView>
@@ -9,10 +12,10 @@
             <Label Text="Default" Margin="0,0,0,-10" />
             <Frame Padding="16">
                 <StackLayout Spacing="16">
-                    <Image Source="photo.jpg" Margin="-16,-16,-16,0" Aspect="AspectFit" />
-                    <Label Text="Walk below the arches" FontSize="24" />
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo2.png}" Margin="-16,-16,-16,0" Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" FontSize="24" TextColor="{StaticResource TextColor}"/>
                     <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
-                           TextColor="{StaticResource SecondaryTextColor}" FontSize="14" />
+                           TextColor="{StaticResource TextColor}" FontSize="14" />
                     <Button Text="more" HorizontalOptions="End" />
                 </StackLayout>
             </Frame>
@@ -20,54 +23,55 @@
             <Label Text="Default (No Shadow)" Margin="0,0,0,-10" />
             <Frame Padding="16" HasShadow="false">
                 <StackLayout Spacing="16">
-                    <Image Source="photo.jpg" Margin="-16,-16,-16,0" Aspect="AspectFit" />
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo1.png}" Margin="-16,-16,-16,0" Aspect="AspectFill" />
                     <Label Text="Walk below the arches" FontSize="24" />
                     <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
-                           TextColor="{StaticResource SecondaryTextColor}" FontSize="14" />
+                           TextColor="{StaticResource TextColor}" FontSize="14" />
                     <Button Text="more" HorizontalOptions="End" />
                 </StackLayout>
             </Frame>
 
             <Label Text="Default With Border" Margin="0,0,0,-10" />
-            <Frame Padding="16" BorderColor="{StaticResource DarkRedColor}">
+            <Frame Padding="16" BorderColor="{StaticResource QuaternaryColor}">
                 <StackLayout Spacing="16">
-                    <Image Source="photo.jpg" Margin="-16,-16,-16,0" Aspect="AspectFit" />
-                    <Label Text="Walk below the arches" FontSize="24" />
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo3.png}" Margin="-16,-16,-16,0" Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" FontSize="24" TextColor="{StaticResource TextColor}"/>
                     <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
-                           TextColor="{StaticResource SecondaryTextColor}" FontSize="14" />
+                           TextColor="{StaticResource TextColor}" FontSize="14" />
                     <Button Text="more" HorizontalOptions="End" />
                 </StackLayout>
             </Frame>
 
             <Label Text="Default With Border (No Shadow)" Margin="0,0,0,-10" />
-            <Frame Padding="16" BorderColor="{StaticResource DarkRedColor}" HasShadow="false">
+            <Frame Padding="16" BorderColor="{StaticResource QuaternaryColor}" HasShadow="false">
                 <StackLayout Spacing="16">
-                    <Image Source="photo.jpg" Margin="-16,-16,-16,0" Aspect="AspectFit" />
-                    <Label Text="Walk below the arches" FontSize="24" />
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo2.png}" Margin="-16,-16,-16,0" Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" FontSize="24" TextColor="{StaticResource TextColor}"/>
                     <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
-                           TextColor="{StaticResource SecondaryTextColor}" FontSize="14" />
+                           TextColor="{StaticResource TextColor}" FontSize="14" />
                     <Button Text="more" HorizontalOptions="End" />
                 </StackLayout>
             </Frame>
 
             <Label Text="No Card Padding &amp; Thin Content Padding" Margin="0,0,0,-10" />
-            <Frame Padding="0" BorderColor="{StaticResource DarkRedColor}" CornerRadius="10">
-                <StackLayout Spacing="16" BackgroundColor="{StaticResource LightRedColor}" Padding="8">
-                    <Image Source="photo.jpg" Margin="-8,-8,-8,0" Aspect="AspectFit" />
-                    <Label Text="Walk below the arches" FontSize="24" />
+            <Frame Padding="0" BorderColor="{StaticResource QuaternaryColor}" CornerRadius="10">
+                <StackLayout Spacing="16" BackgroundColor="{StaticResource QuinaryColor}" Padding="8">
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo1.png}" Margin="-8,-8,-8,0" Aspect="AspectFill" />
+                    <Label Text="Walk below the arches" FontSize="24" TextColor="{StaticResource QuaternaryTextColor}"/>
                     <Label Text="Card containers hold all card elements, and their size is determined by the space those elements occupy. Card elevation is expressed by the container."
-                           TextColor="{StaticResource SecondaryTextColor}" FontSize="14" />
+                           TextColor="{StaticResource QuaternaryTextColor}" FontSize="14" />
                     <Button Text="more" HorizontalOptions="End" />
                 </StackLayout>
             </Frame>
 
             <Label Text="No Padding / Spacing" Margin="0,0,0,-10" />
-            <Frame BackgroundColor="{StaticResource LightRedColor}" Margin="0" Padding="0" HasShadow="true" CornerRadius="10" BorderColor="{StaticResource DarkRedColor}">
+            <Frame BackgroundColor="{StaticResource QuinaryColor}" Margin="0" Padding="0" HasShadow="true" CornerRadius="10" 
+                   BorderColor="{StaticResource QuaternaryColor}">
                 <StackLayout Spacing="16" Margin="0" Padding="0">
-                    <Label Text="Customized Card" FontSize="24" />
-                    <Image Source="photo.jpg" Margin="-16,0" Aspect="AspectFit" />
+                    <Label Text="Customized Card" FontSize="24" TextColor="{StaticResource QuinaryTextColor}" />
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo3.png}" Margin="-16,0" Aspect="AspectFill" />
                     <Label Text="This card has a few changes to its appearance to test whether or not changing properties is supported."
-                           TextColor="{StaticResource SecondaryTextColor}" FontSize="14" />
+                           TextColor="{StaticResource QuinaryTextColor}" FontSize="14" />
                     <Button Text="more" HorizontalOptions="End" BackgroundColor="{StaticResource PrimaryColor}" />
                 </StackLayout>
             </Frame>

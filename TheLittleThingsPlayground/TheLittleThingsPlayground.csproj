@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="LiveXAML" Version="2.1.70" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Styles\" />
@@ -13,6 +14,13 @@
     <Folder Include="Converters\" />
     <Folder Include="Utils\" />
     <Folder Include="Views\Visual\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\photo2.png" />
+    <EmbeddedResource Include="Assets\Images\photo1.png" />
+    <EmbeddedResource Include="Assets\Images\photo3.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\MasterPageLayout.xaml">
@@ -21,5 +29,10 @@
     <EmbeddedResource Update="Views\ThreeFourPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Images\photo2.png" />
+    <None Remove="Assets\Images\photo1.png" />
+    <None Remove="Assets\Images\photo3.png" />
   </ItemGroup>
 </Project>

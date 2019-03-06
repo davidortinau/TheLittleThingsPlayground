@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VisualTesting.Pages.Pickers">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Visual="Material"
+             Title="Picker"
+             Shell.TabBarIsVisible="False"
+             x:Class="VisualTesting.Pages.Pickers">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="10"  >
