@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Button"
+             x:Class="VisualTesting.Pages.ButtonsPage">
+    
+    <ScrollView>
+		<StackLayout Spacing="20" Padding="10" BackgroundColor="White">
+            <Label Text="Default" Margin="0,0,0,-10" />
+            <StackLayout Orientation="Horizontal">
+                <Button BorderColor="Green" BorderWidth="10" Text="Enabled" HorizontalOptions="FillAndExpand" />
+                <Button BorderColor="Green" BorderWidth="20" Text="Disabled" IsEnabled="false" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Label Text="Image" Margin="0,0,0,-10" />
+            <StackLayout Orientation="Horizontal">
+                <Button BorderColor="Green" BorderWidth="20"  Image="iconXamagon" Text="Enabled" HorizontalOptions="FillAndExpand" />
+                <Button BorderColor="Green" BorderWidth="20"  Image="iconXamagon" Text="Disabled" IsEnabled="false" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Label Text="Custom Background" Margin="0,0,0,-10" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Enabled" BackgroundColor="{StaticResource PrimaryColor}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Disabled" BackgroundColor="{StaticResource PrimaryColor}" IsEnabled="false" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Label Text="Custom Text" Margin="0,0,0,-10" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Enabled" TextColor="{StaticResource LightRedColor}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Disabled" TextColor="{StaticResource LightRedColor}" IsEnabled="false" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Label Text="Custom Text &amp; Image" Margin="0,0,0,-10" />
+            <StackLayout Orientation="Horizontal">
+                <Button Image="iconXamagon" Text="Enabled" TextColor="{StaticResource LightRedColor}" HorizontalOptions="FillAndExpand" />
+                <Button Image="iconXamagon" Text="Disabled" TextColor="{StaticResource LightRedColor}" IsEnabled="false" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+
+            <Label Text="Custom Background &amp; Border" Margin="0,0,0,-10" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Enabled" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" BorderWidth="1" HorizontalOptions="FillAndExpand" />
+                <Button Text="Disabled" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" BorderWidth="1" IsEnabled="false" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            
+            <Button Image="iconXamagon" Text="Default Enabled Button" />
+            <Button Image="iconXamagon" Text="Default Disabled Button" IsEnabled="false"  />
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

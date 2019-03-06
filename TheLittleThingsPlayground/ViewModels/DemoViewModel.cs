@@ -5,12 +5,17 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
+using VisualTesting.Pages;
+using Xamarin.Forms;
 
 namespace Demos.ViewModels
 {
     class DemoViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public ICommand GoToVisualPage { get; set; }
 
         public DemoViewModel()
         {
@@ -21,6 +26,14 @@ namespace Demos.ViewModels
                     _colors.Add(field.Name);
             }
 
+            GoToVisualPage = new Command<string>(HandleVisualNav);
+        }
+
+        private async void HandleVisualNav(string page)
+        {
+            //Console.WriteLine($"route: {Shell.CurrentShell.CurrentState.Location.AbsolutePath}");
+            await Shell.CurrentShell.GoToAsync($"{page}", true);
+            //await Shell.CurrentShell.Navigation.PushAsync(new ButtonsPage(), true);
         }
 
         List<string> _colors;

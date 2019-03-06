@@ -5,14 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LiveXAML" Version="2.1.63" />
-    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Styles\" />
     <Folder Include="Extensions\" />
     <Folder Include="Converters\" />
     <Folder Include="Utils\" />
+    <Folder Include="Views\Visual\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Views\MasterPageLayout.xaml">

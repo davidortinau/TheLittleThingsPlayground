@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Entry"
+             x:Class="VisualTesting.Pages.EntriesPage">
+    
+    <ScrollView>
+		<StackLayout Spacing="20" Padding="10"  BackgroundColor="White">
+            <!--
+            TODO: this text box is basically invisible
+            <Entry Placeholder="Default" HorizontalOptions="FillAndExpand" />
+            -->
+
+            <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween">
+                <Entry HeightRequest="150" Placeholder="Title" Text="Vintage Dress"
+                       PlaceholderColor="Green" TextColor="Green" BackgroundColor="#ddd"
+                       FlexLayout.Basis="100%" />
+                <Entry HeightRequest="150" Placeholder="Price" Text="$10"
+                       PlaceholderColor="Purple" TextColor="Purple" BackgroundColor="#ddd"
+                       FlexLayout.Basis="30%" />
+                <Entry HeightRequest="150" Placeholder="Location"
+                       PlaceholderColor="Black" TextColor="Black" BackgroundColor="#ddd"
+                       FlexLayout.Basis="60%" />
+            </FlexLayout>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

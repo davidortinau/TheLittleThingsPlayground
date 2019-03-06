@@ -4,6 +4,13 @@
         <ResourceDictionary>
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="PrimaryColor">#673AB7</Color>
+            <Color x:Key="SecondaryColor">#448AFF</Color>
+            <Color x:Key="SecondaryTextColor">#757575</Color>
+            <Color x:Key="DarkRedColor">#D32F2F</Color>
+            <Color x:Key="LightRedColor">#FFCDD2</Color>
+
+            
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="BarTextColor" Value="White" />

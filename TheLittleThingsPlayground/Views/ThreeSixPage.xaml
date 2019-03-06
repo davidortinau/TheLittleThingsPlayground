@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:demoVMs="clr-namespace:Demos.ViewModels"
+             x:Class="TheLittleThingsPlayground.Views.ThreeSixPage"
+             Shell.TabBarIsVisible="False"
+             Title="3.6.0" 
+             ControlTemplate="{StaticResource MasterPage}">
+    
+    <ContentPage.BindingContext>
+        <demoVMs:DemoViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <StyleSheet Source="../Styles/Global.css"/>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Release Notes" Icon="iconReleaseNotes" Clicked="ReleaseNotes_Clicked" 
+                     AutomationProperties.Name="Release Notes Button"
+                     AutomationProperties.HelpText="Tap here to open release notes in a browser."
+                     />
+        <ToolbarItem Text="XAML" Icon="iconXaml" Clicked="ViewSource_Clicked" 
+                     AutomationProperties.Name="View XAML Button"
+                     AutomationProperties.HelpText="Tap here to view the XAML for this page."
+                     />
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+
+        <!-- ReadOnly Entry -->
+        <Label Text="Entry - ReadOnly" class="featureHeader"  FontSize="Large" Margin="0,0,0,10"/>
+        <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+
+        <Entry Text="Some content" IsReadOnly="true"/>
+
+        <!-- Visual -->
+        <Label Text="Visual - Material controls" class="featureHeader" />
+        <BoxView BackgroundColor="Black" Margin="0,0,0,10" HeightRequest="1"/>
+        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="SpaceBetween" Visual="Material">
+            <Button Text="ActivityIndicator" Command="{Binding GoToVisualPage}" CommandParameter="ActivityIndicatorsPage"/>
+            <Button Text="Button" Command="{Binding GoToVisualPage}" CommandParameter="buttons"/>
+            <Button Text="Card" Command="{Binding GoToVisualPage}" CommandParameter="CardsPage"/>
+            <Button Text="Editor" Command="{Binding GoToVisualPage}" CommandParameter="EditorsPage"/>
+            <Button Text="Entry" Command="{Binding GoToVisualPage}" CommandParameter="EntriesPage"/>
+            <Button Text="Picker" Command="{Binding GoToVisualPage}" CommandParameter="PickersPage"/>
+            <Button Text="Progress" Command="{Binding GoToVisualPage}" CommandParameter="ProgressPage"/>
+            <Button Text="Slider" Command="{Binding GoToVisualPage}" CommandParameter="SlidersPage"/>
+            <Button Text="Stepper" Command="{Binding GoToVisualPage}" CommandParameter="SteppersPage"/>
+        </FlexLayout>
+        
+        
+    </StackLayout>
+</ContentPage>
