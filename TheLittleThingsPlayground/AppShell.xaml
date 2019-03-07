@@ -32,6 +32,8 @@
     
     <ShellContent Title="About" ContentTemplate="{DataTemplate views:AboutPage}" Icon="tab_about" />
     
+    <ShellContent Title="Login" ContentTemplate="{DataTemplate views:LoginPage}" />
+    
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <BoxView HeightRequest="60" />

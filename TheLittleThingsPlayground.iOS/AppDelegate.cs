@@ -30,6 +30,8 @@ namespace TheLittleThingsPlayground.iOS
 
             //UITabBar.Appearance.TintColor = UIColor.Black;
 
+
+
             return base.FinishedLaunching(app, options);
         }
     }

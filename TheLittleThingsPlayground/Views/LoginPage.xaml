@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="TheLittleThingsPlayground.Views.LoginPage"
+             Visual="Material"
+             Shell.NavBarIsVisible="false"
+             >
+    
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            .body {
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                background-color: #00A4EF;
+            }
+
+            .container {
+                background-color: #0078D7;
+                width: 300;
+                height: 340;
+                flex-direction: column;
+                margin-top: -30;
+            }
+
+            .login-form {
+                height: 260;
+                flex-direction: column;
+                margin-top: 20;
+            }
+
+            .logo {
+                font-size: 20;
+                margin-top: 40;
+                text-align: center;
+            }
+
+            entry {
+                height: 50;
+                margin: 10 20 0;
+                color: #fff;
+            }
+
+            button {
+                background-color: #F25022;
+                margin: 25 20 0;
+            }
+
+            .Valid {
+                background-color: #fff;
+            }
+
+            .InValid {
+                background-color: #ff0000;
+            }
+
+            .strength {
+                margin-top: 20;
+            }
+            ]]>
+        </StyleSheet>
+        
+    </ContentPage.Resources>
+    
+    <FlexLayout StyleClass="body" x:Name="Form">
+        <FlexLayout x:Name="LoginForm" StyleClass="container">
+            <Label Text="Hello, Visual" StyleClass="logo"/>
+            <FlexLayout StyleClass="login-form">
+                <Entry x:Name="UserNameEntry" 
+                       IsSpellCheckEnabled="false" 
+                       MaxLength="7" 
+                       Placeholder="UserName"/>
+                <Entry x:Name="PasswordEntry"
+                       Placeholder="Password" 
+                       IsPassword="true"/>
+                <Button Text="Log in" FlexLayout.AlignSelf="end"/>
+            </FlexLayout>
+        </FlexLayout>
+    </FlexLayout>
+    
+</ContentPage>
