@@ -13,7 +13,7 @@
                 color: #fff;
                 align-items: center;
                 justify-content: center;
-                background-color: #00A4EF;
+                background-color: #990078D7;
             }
 
             .container {
@@ -37,14 +37,12 @@
             }
 
             entry {
-                height: 50;
                 margin: 10 20 0;
                 color: #fff;
             }
 
             button {
                 background-color: #F25022;
-                margin: 25 20 0;
             }
 
             .Valid {
@@ -70,11 +68,20 @@
                 <Entry x:Name="UserNameEntry" 
                        IsSpellCheckEnabled="false" 
                        MaxLength="7" 
-                       Placeholder="UserName"/>
+                       Placeholder="Username"/>
                 <Entry x:Name="PasswordEntry"
                        Placeholder="Password" 
                        IsPassword="true"/>
-                <Button Text="Log in" FlexLayout.AlignSelf="end"/>
+                <StackLayout FlexLayout.AlignSelf="End" 
+                             Margin="20 25" 
+                             Spacing="25"
+                             Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="REGISTER" 
+                           FontSize="15" 
+                           VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                    <Button Text="Log in" />
+                </StackLayout>
+                
             </FlexLayout>
         </FlexLayout>
     </FlexLayout>
