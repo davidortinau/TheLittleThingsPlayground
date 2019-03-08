@@ -23,6 +23,9 @@
     <EmbeddedResource Include="Assets\Images\photo3.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Views\CardsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\MasterPageLayout.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

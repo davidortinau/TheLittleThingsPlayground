@@ -69,6 +69,18 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Roboto-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Roboto-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Roboto-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Roboto-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

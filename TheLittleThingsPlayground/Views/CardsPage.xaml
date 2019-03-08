@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utils="clr-namespace:TheLittleThingsPlayground.Utils"
+             Shell.NavBarIsVisible="true"
+             Title="Material Cards"
+             Visual="Material"
+             BackgroundColor="Silver"
+             x:Class="TheLittleThingsPlayground.Views.CardsPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="RobotoRegular"
+                x:TypeArguments="x:String"
+                Android="Roboto-Regular.ttf#Roboto"
+                iOS="Roboto-Regular" />
+            <OnPlatform x:Key="RobotoLight"
+                x:TypeArguments="x:String"
+                Android="Roboto-Light.ttf#Roboto Light"
+                iOS="Roboto-Light" />
+            <OnPlatform x:Key="RobotoBold"
+                x:TypeArguments="x:String"
+                Android="Roboto-Bold.ttf#Roboto Bold"
+                iOS="Roboto-Bold" />
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RobotoRegular}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+            </Style>
+        </ResourceDictionary>
+        <StyleSheet>
+            <![CDATA[
+                .timeButton {
+                    background-color: #f1f1f1;
+                    color: #666666;
+                    height: 40;
+                    border-radius: 20;
+                    margin-right: 8;
+                    width: 80;
+                }
+            
+                .selected {
+                    background-color: #F25022;
+                    color: #ffffff;
+                }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <StackLayout Margin="20">
+
+            <Frame Padding="0" CornerRadius="10">
+                <StackLayout Spacing="16" Padding="15">
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo1.png}" 
+                           Margin="-15,-15,-15,0" Aspect="AspectFill" />
+                    <Label Text="Cafe 17" FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                    <Label FontSize="14"
+                           TextColor="{StaticResource TextColor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontFamily="{OnPlatform Android=FabMDL2.ttf#Fabric MDL2 Assets, iOS=Fabric MDL2 Assets}"
+                                      TextColor="{StaticResource SecondaryColor}"
+                                      >&#xE735;&#xE735;&#xE735;&#xE735;&#xE734;</Span>
+                                <Span FontFamily="{StaticResource RobotoLight}"
+                                      Text=" 4.5 (143)"/>
+                                
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="$ ● Italian, Cafe"/>
+                    <Label FontFamily="{StaticResource RobotoLight}" 
+                           Text="Small plates, salads &amp; sandwiches. An intimate setting with 12 indoor seats plus patio seating."
+                           TextColor="{StaticResource TextColor}" 
+                           FontSize="14" />
+
+                    <BoxView HeightRequest="1" 
+                             BackgroundColor="Silver" HorizontalOptions="Fill"/>
+
+                    <Label Text="Tonight's availability"
+                           FontFamily="Roboto Bold"
+                           TextColor="{StaticResource TextColor}"
+                           FontSize="18"/>
+
+                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                        <FlexLayout Direction="Row" Visual="Default">
+                            <Button Text="5:30PM" class="timeButton"/>
+                            <Button Text="6:30PM" class="timeButton, selected"/>
+                            <Button Text="7:00PM" class="timeButton"/>
+                            <Button Text="8:30PM" class="timeButton"/>
+                            <Button Text="9:00PM" class="timeButton"/>
+                            <Button Text="9:30PM" class="timeButton"/>
+                        </FlexLayout>
+                    </ScrollView>
+
+                    <Label Text="RESERVE" 
+                           Margin="0,20,0,0"
+                           HorizontalOptions="Start" 
+                           TextColor="{StaticResource QuinaryColor}" />
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -33,6 +33,7 @@
     <ShellContent Title="About" ContentTemplate="{DataTemplate views:AboutPage}" Icon="tab_about" />
     
     <ShellContent Title="Login" ContentTemplate="{DataTemplate views:LoginPage}" />
+    <ShellContent Title="Cards" ContentTemplate="{DataTemplate views:CardsPage}" />
     
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>

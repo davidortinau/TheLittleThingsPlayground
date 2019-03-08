@@ -13,7 +13,7 @@
                 color: #fff;
                 align-items: center;
                 justify-content: center;
-                background-color: #990078D7;
+                background-color: Silver;
             }
 
             .container {
