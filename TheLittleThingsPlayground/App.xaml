@@ -20,7 +20,25 @@
             <Color x:Key="DarkRedColor">#D32F2F</Color>
             <Color x:Key="LightRedColor">#FFCDD2</Color>
 
-            
+            <!-- Fonts-->
+            <OnPlatform x:Key="RobotoRegular"
+                x:TypeArguments="x:String"
+                Android="Roboto-Regular.ttf#Roboto"
+                iOS="Roboto-Regular" />
+            <OnPlatform x:Key="RobotoLight"
+                x:TypeArguments="x:String"
+                Android="Roboto-Light.ttf#Roboto Light"
+                iOS="Roboto-Light" />
+            <OnPlatform x:Key="RobotoBold"
+                x:TypeArguments="x:String"
+                Android="Roboto-Bold.ttf#Roboto Bold"
+                iOS="Roboto-Bold" />
+            <OnPlatform x:Key="FabMDL2"
+                x:TypeArguments="x:String"
+                Android="FabMDL2.ttf#Fabric MDL2 Assets"
+                iOS="Fabric MDL2 Assets" />
+
+
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
                 <Setter Property="BarTextColor" Value="{StaticResource PrimaryTextColor}" />
@@ -35,15 +53,8 @@
                 </ScrollView>
             </ControlTemplate>
             
-            <Style x:Key="IconFont" TargetType="Label">  
-               <Setter Property="FontFamily">
-                    <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:String" Default="Fabric MDL2 Assets">
-                            <On Platform="iOS" Value="Fabric MDL2 Assets"></On>
-                            <On Platform="Android" Value="FabMDL2.ttf#Fabric MDL2 Assets"></On>
-                        </OnPlatform>
-                    </Setter.Value>
-                </Setter>
+            <Style x:Key="IconFont" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FabMDL2}"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

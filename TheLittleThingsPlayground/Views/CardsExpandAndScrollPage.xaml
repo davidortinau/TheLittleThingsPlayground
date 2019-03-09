@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utils="clr-namespace:TheLittleThingsPlayground.Utils"
+             x:Class="TheLittleThingsPlayground.Views.CardsExpandAndScrollPage"
+             Visual="Material"
+             Title="Material Scroll"
+             BackgroundColor="Silver"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RobotoRegular}"/>
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+            </Style>
+        </ResourceDictionary>
+        <StyleSheet>
+            <![CDATA[
+                .timeButton {
+                    background-color: #f1f1f1;
+                    color: #666666;
+                    height: 40;
+                    border-radius: 20;
+                    margin-right: 8;
+                    width: 80;
+                }
+            
+                .selected {
+                    background-color: #F25022;
+                    color: #ffffff;
+                }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Margin="20">
+
+            <Frame Padding="0" CornerRadius="10" Margin="0,0,0,15">
+                <Grid Padding="15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Image 
+                        Grid.Row="0"
+                        Grid.ColumnSpan="2"
+                        Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo1.png}" 
+                           Margin="-15,-15,-15,0" Aspect="AspectFill" />
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        FontSize="14"
+                           TextColor="{StaticResource TextColor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Cafe 17"
+                                      FontSize="28"
+                                      />
+                                <Span Text="&#x000A;"/>
+                                <Span FontFamily="{OnPlatform Android=FabMDL2.ttf#Fabric MDL2 Assets, iOS=Fabric MDL2 Assets}"
+                                      TextColor="{StaticResource SecondaryColor}"
+                                      >&#xE735;&#xE735;&#xE735;&#xE735;&#xE734;</Span>
+                                <Span FontFamily="{StaticResource RobotoLight}"
+                                      Text=" 4.5 (143)"/>
+
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Button Visual="Default" 
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="&#xE972;"
+                            FontSize="16" VerticalOptions="Start"
+                            TextColor="Silver"
+                            BackgroundColor="Transparent"
+                            FontFamily="{StaticResource FabMDL2}"
+                            Clicked="Button_Clicked"
+                            />
+
+                    <FlexLayout 
+                        x:Name="Reviews"
+                        Direction="Row" 
+                                Wrap="Wrap"
+                                Grid.Row="3" 
+                                Grid.ColumnSpan="2"
+                                Margin="0,0,0,0"
+                                AlignItems="Start"
+                                HeightRequest="440"
+                        IsVisible="True"
+                                >
+
+                        <BoxView HeightRequest="1"
+                                 Margin="0,10,0,20"
+                                 BackgroundColor="Silver" 
+                                 FlexLayout.Basis="100%"/>
+
+                        <Label Text="Reviews (314)"
+                               FontSize="16"
+                               FlexLayout.Basis="100%"
+                               Margin="0,0,0,10"
+                               />
+                        
+                        <BoxView WidthRequest="60" HeightRequest="60" 
+                                 CornerRadius="30"
+                                 FlexLayout.AlignSelf="Center"
+                                 BackgroundColor="Black"/>
+
+                        <Label FlexLayout.Basis="80%" Margin="10,0,0,0"
+                               FlexLayout.AlignSelf="Center"
+                               >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Miguel de Icaza" FontSize="18"/>
+                                    <Span Text="&#x000A;"/>
+                                    <Span Text="20 reviews" FontFamily="{StaticResource RobotoLight}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label 
+                            Margin="0,10"
+                        FlexLayout.Basis="100%"
+                        FontSize="14"
+                           TextColor="{StaticResource TextColor}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontFamily="{OnPlatform Android=FabMDL2.ttf#Fabric MDL2 Assets, iOS=Fabric MDL2 Assets}"
+                                      TextColor="{StaticResource SecondaryColor}"
+                                      >&#xE735;&#xE735;&#xE735;&#xE735;&#xE734;</Span>
+                                    <Span FontFamily="{StaticResource RobotoLight}"
+                                      Text=" 3 days ago"/>
+
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label FlexLayout.Basis="100%" FontSize="16">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a nulla sed risus consequat volutpat ut et ex. Aenean eget orci sit amet leo feugiat ultrices. Phasellus commodo dui arcu, eget dignissim justo sodales nec. Ut hendrerit, ex eget pharetra dignissim, nibh tortor imperdiet erat, a consectetur erat dolor eu nulla. Etiam tempus eget dolor at posuere. Nullam fringilla, dui sed aliquet imperdiet, erat metus molestie nisl, sit amet varius ex tellus ac est. Aliquam erat volutpat. Integer pellentesque lectus a quam imperdiet elementum. Morbi at consequat magna, vitae porta dolor. Nulla vel interdum neque. Quisque mollis sem in magna consectetur lacinia. Sed ipsum felis, faucibus in tellus et, aliquam commodo mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur nec dui quis risus semper venenatis.
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </FlexLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="0" CornerRadius="10">
+                <StackLayout Spacing="16" Padding="15">
+                    <Image Source="{utils:ImageResource TheLittleThingsPlayground.Assets.Images.photo1.png}" 
+                           Margin="-15,-15,-15,0" Aspect="AspectFill" />
+                    <Label Text="Cafe 17" FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                    <Label FontSize="14"
+                           TextColor="{StaticResource TextColor}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontFamily="{OnPlatform Android=FabMDL2.ttf#Fabric MDL2 Assets, iOS=Fabric MDL2 Assets}"
+                                      TextColor="{StaticResource SecondaryColor}"
+                                      >&#xE735;&#xE735;&#xE735;&#xE735;&#xE734;</Span>
+                                <Span FontFamily="{StaticResource RobotoLight}"
+                                      Text=" 4.5 (143)"/>
+
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

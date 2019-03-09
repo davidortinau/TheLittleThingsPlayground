@@ -35,6 +35,7 @@
     <ShellContent Title="Login" ContentTemplate="{DataTemplate views:LoginPage}" />
     <ShellContent Title="Card" ContentTemplate="{DataTemplate views:CardsPage}" />
     <ShellContent Title="Card Expand" ContentTemplate="{DataTemplate views:CardExpandPage}" />
+    <ShellContent Title="Card Scroll &amp; Expand" ContentTemplate="{DataTemplate views:CardsExpandAndScrollPage}" />
     
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
