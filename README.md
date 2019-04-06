@@ -1,7 +1,7 @@
 # TheLittleThingsPlayground
 Playground for experimenting with new Xamarin.Forms features.
 
-## ThreeFive (Xamarin.Forms 3.6.0)
+## ThreeSix (Xamarin.Forms 3.6.0)
 
 [Release Notes](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/release-notes/3.6/3.6.0)
 
